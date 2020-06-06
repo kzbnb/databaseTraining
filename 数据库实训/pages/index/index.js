@@ -6,7 +6,23 @@ Page({
    */
   data: {
   name:'',
-  id:''
+  id:'',
+  openid:''
+  },
+  getopenid: function () {
+    console.log("setlogin被调用了")
+    app.globalData.hasLogin = true
+    let that = this;
+    wx.cloud.callFunction({
+      name: "getOpenId",
+      success(res) {
+        app.globalData.openid = res.result.openid
+        let openId = res.result.openid
+        that.setData({
+          openid: openId
+        })
+      }
+    })
   },
   getName: function (e) {
     let input = e.detail.value
@@ -21,6 +37,7 @@ Page({
     })
   },
 add:function(){
+this.getopenid()
 wx.request({
   url: 'http://localhost:8080/login',
   data:{

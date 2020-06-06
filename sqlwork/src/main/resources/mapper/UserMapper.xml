@@ -6,4 +6,7 @@
     <select id="getUserByOpenId" resultType="java.lang.Integer">
         select count(_openid) from user where _openid=#{openid}
   </select>
+    <insert id="addUserIntoDataBase" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.user">
+        insert into user (_openid,name,tel,grade,classNum,stuNum) values (#{openid},#{name},#{tel},#{grade},#{classNum},#{stuNum})
+    </insert>
 </mapper>

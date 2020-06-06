@@ -1,1 +1,34 @@
-/* pages/write_myInfo/write_myInfo.wxss */
+/* pages/changeInfo/changeInfo.wxss */
+.change{
+  width: 150px;
+  border-radius:25px ;
+  background-color:rgba(0, 0, 0, 0.1) 1px solid;
+  font-weight: 600;
+  font-size:16px;
+  margin-top:20px;
+}
+.header{
+  font-size:18px;
+  text-align:center;
+  padding: 10px 0;
+   border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+input{
+    height:50px;
+    width: 100%;
+    border-bottom:rgba(0, 0, 0, 0.1) 1px solid;
+    line-height: 50px;
+    font-size:16px;
+}
+.mes{
+  color:red;
+  font-size: 14px;
+  float: right;
+}
+.item{
+  padding-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom:rgba(0, 0, 0, 0.1) 1px solid ;
+  display: flex;
+}

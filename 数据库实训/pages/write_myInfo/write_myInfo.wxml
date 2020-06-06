@@ -1,2 +1,20 @@
-<!--pages/write_myInfo/write_myInfo.wxml-->
-<text>pages/write_myInfo/write_myInfo.wxml</text>
+<view class="header">
+<text>填写个人信息</text>
+</view>
+
+   
+    <input value="{{ name }}" type="text" title="姓名"  placeholder="姓名如：王小华" bindinput="getName" maxlength="12"   />
+
+  
+    <input value="{{ stuNum }}" type="text" title="学号"  placeholder="学号201830661234" bindinput="getStuNum" maxlength="12" />
+  
+
+    <input value="{{ tel }}" type="text" title="联系方式"  placeholder="填写手机号码" bindinput="getTel" maxlength="11"/>
+
+    <input value="{{ grade }}" type="text" title="年级" placeholder="年级如2017"  bindinput="getGrade"   maxlength="4"/>
+
+    <input value="{{ classNum }}" type="text" title="班级" placeholder="班级如 1班"  bindinput="getClass"  maxlength="12"/>
+
+
+<!-- 按下按钮在框中显示data值 -->
+<button bindtap="addData" class="change">提交信息</button>
