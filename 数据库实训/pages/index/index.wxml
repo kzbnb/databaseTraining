@@ -1,0 +1,9 @@
+<view class="item">
+		<text>name</text>
+		<input bindinput="getName" ></input>
+	</view>
+	<view class="item">
+		<text>id</text>
+		<input bindinput="getId" ></input>
+	</view>
+<button bindtap="add" class="change">提交信息</button>

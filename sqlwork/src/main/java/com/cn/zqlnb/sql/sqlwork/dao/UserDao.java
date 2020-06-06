@@ -1,0 +1,9 @@
+package com.cn.zqlnb.sql.sqlwork.dao;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserDao {
+    public int getUserByOpenId(@Param("openid") String openid);
+}

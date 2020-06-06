@@ -1,0 +1,8 @@
+<!-- 登陆页面 -->
+<view class="myLogin">
+  <block wx:if="{{isLogin}}">
+    <image src="{{src}}"></image>
+    <text>{{nickName}}</text>
+  </block>
+  <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserRecord"  >未登录，点此登录</button>
+</view>
