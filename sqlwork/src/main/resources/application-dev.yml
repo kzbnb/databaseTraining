@@ -9,11 +9,11 @@ spring:
 
   datasource:
 
-    username: root
+    username: yzh
 
-    password: zaxscd123
+    password: 123
 
-    url: jdbc:mysql://localhost:3306/users?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://106.55.49.252:3306/users?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
 
     driver-class-name: com.mysql.jdbc.Driver
 
