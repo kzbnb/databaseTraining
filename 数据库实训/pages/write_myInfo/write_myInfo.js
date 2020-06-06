@@ -70,7 +70,7 @@ Page({
     console.log('test:',this.data.openid)
     console.log(this.data.name,this.data.stuNum,this.data.grade,this.data.tel,this.data.classNum)
     wx.request({
-      url: 'http://localhost:8080/insertUserIntoDatabase',
+      url: 'http://106.55.49.252:8080/insertUserIntoDatabase',
       data:{
         openid:this.data.openid,
         name:this.data.name,
