@@ -69,8 +69,9 @@ Page({
     var userid = that.data.openid
     console.log('test',userid)
     //调用后台接口查询该openid是否存在数据库内
+    //106.55.49.252
     wx.request({
-      url: 'http://localhost:8080/getUserRecord',
+      url: 'http://106.55.49.252:8080/getUserRecord',
       data: {
         openid: userid
       },

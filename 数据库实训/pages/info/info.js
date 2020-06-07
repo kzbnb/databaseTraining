@@ -117,7 +117,7 @@ Page({
         //   }
         // })
         wx.request({
-          url: 'http://localhost:8080/getUserInfo',
+          url: 'http://106.55.49.252:8080/getUserInfo',
           data: {
             openid: userid
           },

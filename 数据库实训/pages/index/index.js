@@ -27,7 +27,8 @@ Page({
     //查所有activity
     var that=this;
       wx.request({
-        url: 'http://localhost:8080/showAllactivity',
+        //106.55.49.252
+        url: 'http://106.55.49.252:8080/showAllactivity',
         success:function(res)
         {
             console.log(res);
