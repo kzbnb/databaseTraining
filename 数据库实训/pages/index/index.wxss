@@ -26,3 +26,14 @@
   font-size:16px;
   
 }
+.kzb{
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx solid black;
+  height:120px;
+  position:relative;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 5px;
+  padding:10px;
+  margin-bottom: 10px;
+}

@@ -1,9 +1,12 @@
-<view class="item">
-		<text>name</text>
-		<input bindinput="getName" ></input>
+
+	<block class="activity" wx:for="{{activityList}}" wx:item ="activity" wx:key="this">
+	<view class="kzb">
+	<view>{{item.title}}</view>
+		<view>{{item.activity_id}}</view>
+		<view>{{item.start_time}}    </view>
+		<view>{{item.end_time}}    </view>
+
 	</view>
-	<view class="item">
-		<text>id</text>
-		<input bindinput="getId" ></input>
-	</view>
-<button bindtap="add" class="change">提交信息</button>
+	</block>
+	
+

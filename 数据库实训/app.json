@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/info/info",
     "pages/my/my",
-    "pages/write_myInfo/write_myInfo",
-    "pages/index/index"
+    "pages/info/info",
+    "pages/index/index",
+    
+    
+    "pages/write_myInfo/write_myInfo"
+   
     
   ],
   "usingComponents": {

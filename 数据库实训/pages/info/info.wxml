@@ -23,4 +23,4 @@
     <text class="value">{{userclass}}</text>
   </view>
 </view>
-<button bindtap="changeMyInfo" class="change">个人信息懒得做了</button>
+
