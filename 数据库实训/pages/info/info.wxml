@@ -1,0 +1,26 @@
+<view class='showinfo'>
+<view class="header">
+<text>个人信息</text>
+</view>
+  <view class='userinfo'>
+    <text class="title">姓名:</text>
+    <text class="value">{{username}}</text>
+  </view>
+  <view class='userinfo'>
+    <text class="title">学号:</text>
+    <text class="value">{{usernum}}</text>
+  </view>
+  <view class='userinfo'>
+    <text class="title">手机:</text>
+    <text class="value">{{usertel}}</text>
+  </view>
+    <view class='userinfo'>
+    <text class="title">年级:</text>
+    <text class="value">{{usergrade}}</text>
+  </view>
+    <view class='userinfo'>
+    <text class="title">班级:</text>
+    <text class="value">{{userclass}}</text>
+  </view>
+</view>
+<button bindtap="changeMyInfo" class="change">个人信息懒得做了</button>

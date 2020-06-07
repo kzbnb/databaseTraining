@@ -25,10 +25,3 @@ input{
   font-size: 14px;
   float: right;
 }
-.item{
-  padding-left: 5%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom:rgba(0, 0, 0, 0.1) 1px solid ;
-  display: flex;
-}

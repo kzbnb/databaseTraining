@@ -10,8 +10,7 @@ Page({
   },
   //获取openId
   getopenid:function() {
-    console.log("setlogin被调用了")
-    app.globalData.hasLogin = true
+    // app.globalData.hasLogin = true
     let that = this;
     wx.cloud.callFunction({
       name: "getOpenId",
@@ -24,10 +23,51 @@ Page({
   }
 })
 },
+  logOff: function () {
+    app.globalData.hasLogin = false;
+    this.setData({
+      isLogin: false,
+      volunteerTime: 0
+    })
+    wx.showModal({
+      title: "已退出登录 :)"
+    })
+  },
+  goToWriteInfo: function () {
+    console.log(app.globalData.hasLogin)
+    if (app.globalData.hasLogin) {
+      wx.navigateTo({
+        url: '/pages/info/info',
+      })
+    }
+    else {
+      wx.showModal({
+        title: '请先进行登录',
+        content: '请先登录',
+      })
+    }
+  },
+  getMyInfo: function (e) {
+    let that = this
+    // console.log("beidiaoyongle")
+    app.globalData.hasLogin = true
+    let info = e.detail.userInfo
+    app.globalData.nickName = info.nickName
+    app.globalData.src = info.avatarUrl
+    if (app.globalData.src != '') {
+      this.setData({
+        src: info.avatarUrl,
+        nickName: info.nickName,
+        isLogin: true,
+      })
+      app.globalData.hasLogin = true
+      this.getUserRecord()
+    }
+  },
   getUserRecord: function () {
     var that = this
-    that.getopenid()
     var userid = that.data.openid
+    console.log('test',userid)
     //调用后台接口查询该openid是否存在数据库内
     wx.request({
       url: 'http://localhost:8080/getUserRecord',
@@ -59,7 +99,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getopenid()
+    console.log('onReady:',this.data.openid)
   },
 
   /**

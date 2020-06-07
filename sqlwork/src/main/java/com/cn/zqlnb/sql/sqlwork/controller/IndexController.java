@@ -1,5 +1,6 @@
 package com.cn.zqlnb.sql.sqlwork.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.cn.zqlnb.sql.sqlwork.dao.UserDao;
 import com.cn.zqlnb.sql.sqlwork.pojo.user;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
     @Autowired
     UserDao userDao;
+
+    @RequestMapping("/getUserInfo")
+    public String getUserInfo(String openid){
+    user user=userDao.getUserInfo(openid);
+    String userInfo= JSON.toJSONString(user);
+    return userInfo;
+    };
 
     @RequestMapping("/getUserRecord")
     public String index(String openid) {

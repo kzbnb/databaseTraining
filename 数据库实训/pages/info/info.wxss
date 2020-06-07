@@ -1,0 +1,33 @@
+.userinfo{
+  height:50px;
+  width: 100%;
+  border-bottom:rgba(0, 0, 0, 0.1) 1px solid;
+  line-height: 50px;
+  padding:  0 10px;
+    /* height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around; */
+}
+
+.header{
+  font-size:18px;
+  text-align:center;
+  padding: 10px 0;
+ border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+.value{
+  display: inline-block;
+  float:right;
+  margin-right:30px;
+}
+.change{
+  width: 150px;
+  border-radius:25px ;
+  background-color:rgba(0, 0, 0, 0.1) 1px solid;
+  
+  font-weight: 600;
+  font-size:16px;
+  margin-top:20px;
+}

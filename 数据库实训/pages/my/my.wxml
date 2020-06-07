@@ -1,8 +1,27 @@
-<!-- 登陆页面 -->
+<!-- 登陆页面
 <view class="myLogin">
   <block wx:if="{{isLogin}}">
     <image src="{{src}}"></image>
     <text>{{nickName}}</text>
   </block>
   <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserRecord"  >未登录，点此登录</button>
+</view> -->
+<!-- 登陆页面 -->
+<view class="myLogin">
+  <block wx:if="{{isLogin}}">
+    <image src="{{src}}"></image>
+    <text>{{nickName}}</text>
+  </block>
+  <button wx:else open-type="getUserInfo" bindgetuserinfo="getMyInfo"  >未登录，点此登录</button>
 </view>
+<i-cell-group>
+
+    <i-cell title="个人信息" is-link bindtap="goToWriteInfo">
+      <i-grid-icon  slot="icon">
+            <image src="/images/user.png" />
+      </i-grid-icon>
+    </i-cell>
+   
+</i-cell-group>
+
+<button class="logoff" bindtap="logOff">退出登录</button>

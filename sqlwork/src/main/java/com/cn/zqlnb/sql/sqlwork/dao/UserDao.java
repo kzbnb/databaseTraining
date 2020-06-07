@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface UserDao {
     public int getUserByOpenId(@Param("openid") String openid);
     public int addUserIntoDataBase(user user);
+    public user getUserInfo(String openid);
 }

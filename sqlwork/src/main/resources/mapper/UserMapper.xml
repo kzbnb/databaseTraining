@@ -9,4 +9,9 @@
     <insert id="addUserIntoDataBase" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.user">
         insert into user (_openid,name,tel,grade,classNum,stuNum) values (#{openid},#{name},#{tel},#{grade},#{classNum},#{stuNum})
     </insert>
+
+    <select id="getUserInfo" resultType="com.cn.zqlnb.sql.sqlwork.pojo.user">
+        select* from user where _openid=#{openid}
+    </select>
+
 </mapper>
