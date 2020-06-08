@@ -1,3 +1,13 @@
+swiper{
+  height: 200px;
+  width: 100%;
+}
+
+swiper image{
+  height: 100%;
+  width: 100%;
+}
+
 .header{
   font-size:18px;
   text-align:center;
@@ -37,3 +47,4 @@
   padding:10px;
   margin-bottom: 10px;
 }
+

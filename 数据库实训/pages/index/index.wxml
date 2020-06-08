@@ -1,4 +1,11 @@
-
+<swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <view wx:for="{{swiperImg}}" wx:key="swiper{{index}}">
+        <swiper-item>
+            <image src="{{item.src}}" />
+        </swiper-item>
+    </view>
+</swiper>
+	
 	<block class="activity" wx:for="{{activityList}}" wx:item ="activity" wx:key="this">
 	<view class="kzb">
 	<view>{{item.title}}</view>

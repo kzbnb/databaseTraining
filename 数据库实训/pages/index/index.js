@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    swiperImg:[
+      {src:"/images/8.jpg"},
+      {src :"/images/shouye3.jpg"}
+    ],
   name:'',
   id:'',
   openid:'',
