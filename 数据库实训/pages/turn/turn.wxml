@@ -1,0 +1,24 @@
+<view class="news-list">
+  <view class="news-item" wx:for="{{turn}}" wx:key="{{item.id}}" >
+   <view class="rongqi">
+    <view  >
+        <view class="title"> 站点：{{item.placeName}}</view>
+        <view class="time">活动时间：{{item.begin_time}}--{{item.end_time}}</view>
+        <view class="time">截止报名时间:活动前一天</view>
+    </view>
+    <view class="fuzhu">
+        <ul>
+          <li>
+             <image class='suo' src="/images/user.png"></image> 
+          </li>
+          <li class="person">
+             <text >{{item.attendNum}}/{{item.limit}}</text>
+          </li>
+        </ul>
+    </view>
+    
+    </view>
+  </view>
+ 
+</view>
+<button bindtap="addMore">加载更多</button>

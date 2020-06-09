@@ -12,7 +12,6 @@
         }-->
     <select id="getAllactivity" resultType="com.cn.zqlnb.sql.sqlwork.pojo.activity">
     select * from activity
-
-</select>
+    </select>
 
 </mapper>

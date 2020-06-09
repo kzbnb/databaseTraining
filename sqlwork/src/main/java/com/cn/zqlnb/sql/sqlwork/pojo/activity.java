@@ -1,9 +1,13 @@
 package com.cn.zqlnb.sql.sqlwork.pojo;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class activity {
     private Integer activity_id;
     private String title;
     private String start_time;
+    private String end_time;
 
     public String getEnd_time() {
         return end_time;
@@ -13,7 +17,6 @@ public class activity {
         this.end_time = end_time;
     }
 
-    private String end_time;
 
     public String getStart_time() {
         return start_time;

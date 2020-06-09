@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/index/index",
+   "pages/turn/turn",
+   "pages/index/index",
     "pages/my/my",
-    "pages/info/info", 
+    "pages/info/info",
     "pages/write_myInfo/write_myInfo"
+    
   ],
   "usingComponents": {
     "i-grid": "/dist/grid/index",
@@ -16,36 +18,32 @@
     "i-cell": "/dist/cell/index",
     "i-card": "/dist/card/index"
   },
-"window":
-{
-"navigationBarBackgroundColor": "#212124",
-"navigationBarTextStyle": "white",
-"navigationBarTitleText":"志愿服务系统",
-"backgroundColor":"#212124",
-"backgroundTextStyle":"light",
-"enablePullDownRefresh":false
-},
-
-"tabBar":
-{
-  "color":"#ffffff",
-  "selectedColor":"#dbb86b",
-  "backgroundColor":"#212124",
-  "list":[
-    {
-      "pagePath":"pages/index/index",
-      "text":"首页",
-      "iconPath":"images/index1.png",
-      "selectedIconPath":"images/index2.png"
-    },
-    {
-      "pagePath":"pages/my/my",
-      "text":"我的",
-      "iconPath":"images/my1.png",
-      "selectedIconPath":"images/my2.png"
-    }
-  ]
-},
-
+  "window": {
+    "navigationBarBackgroundColor": "#212124",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "志愿服务系统",
+    "backgroundColor": "#212124",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#dbb86b",
+    "backgroundColor": "#212124",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index1.png",
+        "selectedIconPath": "images/index2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my1.png",
+        "selectedIconPath": "images/my2.png"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

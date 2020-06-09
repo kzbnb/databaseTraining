@@ -1,0 +1,64 @@
+/* 幻灯片部分 */
+swiper{
+  height: 400rpx;
+  width:100%;
+}
+swiper image{
+  height: 100%;
+  width:100%;
+}
+
+.news-list{
+  padding:15px;
+}
+.news-item{
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx solid black;
+  height:120px;
+  position:relative;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 5px;
+  padding:10px;
+  margin-bottom: 10px;
+}
+.news-item .container .img{
+  height:100px;
+  width:130px;
+  margin-right:10px;
+}
+.title{
+  
+  font-weight: 500;
+}
+.rongqi{
+  position:relative;
+  width: 100%;
+}
+.time{
+  font-size:13px;
+  color:red;
+}
+.fuzhu{
+  position: absolute;
+  bottom:0;
+  height:20px;
+  margin-bottom: 10px;
+
+}
+.fuzhu li{
+  float:left;
+  margin-bottom: 10px;
+}
+.fuzhu .suo{
+  width: 20px;
+  height: 20px;
+}
+.fuzhu .person{
+  margin-top:2px;
+}
+.fuzhu .person text{
+  font-size: 11px;
+}
+
+
