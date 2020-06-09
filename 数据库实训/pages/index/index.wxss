@@ -80,7 +80,7 @@ swiper image{
 }
 
 .attend div{
-  font-size: 14px;
+  font-size: 12px;
   color: #dbb86b;
   font-weight: 700;
   border-width: 1px;
@@ -89,7 +89,7 @@ swiper image{
   padding: 1px 10px;
   background-color: #212124;
   border-color: #212124;
-  margin-left: 20px;
+  margin-left: 8px;
 }
 
 
