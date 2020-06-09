@@ -7,28 +7,30 @@
 </swiper>
 
 <view class="list">
-	<view class="activity" wx:for="{{activityList}}" wx:item ="activity" wx:key="this">
-	 <view class="con"> <image class="img" src="{{item.poster}}" /></view>
+	<!-- <view class="activity" wx:for="{{activityList}}" wx:item ="activity" wx:key="this"> -->
+	 <view class="con"> <image class="img" src="/images/8.jpg" /> </view>
 	<view class="kzb">
-		<view  bindtap='onLoad' data-id="{{item.id}}">{{item.activity_id}}</view>
-	   <view class="title">{{item.title}}</view>	
-		<view class="time">开始时间：{{item.start_time}}    </view>
-		<view class="time">结束时间：{{item.end_time}}    </view>
+		<!-- <view  bindtap='onLoad' data-id="{{item.id}}">{{item.activity_id}}</view> -->
+	   <view class="title">地铁志愿者</view>	
+		<view class="time">开始时间：2020.06.09    </view>
+		<view class="time">结束时间：2020.06.28    </view>
+        <view class="help">
+          <ul>
+                <li>
+                     <image class="jieshao" src="/images/user1.png" />
+                 </li>
+                 <li class="p">
+                     <text > 2/30</text>
+                </li>
+                <li class="attend">
+                     <div>
+                        报名
+                     </div>
+                </li>
+              </ul>
+         </view> 
 	</view>
-
-	 <view class="help">
-    <ul>
-      <li>
-       <image class="jieshao" src="/images/user.png" />
-       </li>
-       <li class="p">
-       <text >{{item.attendNum}}/{{item.limit}}</text>
-       </li>
-       </ul>
-    </view>
-	</view>
-	</view>
-
+ </view>
 	<button bindtap="onReachBottom">加载更多</button>
 	
 
