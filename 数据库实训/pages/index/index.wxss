@@ -10,9 +10,18 @@ swiper image{
 
 .list{
   padding: 15px;
+  display: flex;
+  flex-direction: row;
+  border-bottom:1rpx solid black;
+  height:110px;
+  position:relative;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 5px;
+  padding:10px;
+  margin: 10px;
 }
 
-.activity{
+/* .activity{
   display: flex;
   flex-direction: row;
   border-bottom:1rpx solid black;
@@ -22,17 +31,17 @@ swiper image{
   border-radius: 5px;
   padding:10px;
   margin-bottom: 10px;
-}
+} */
 
-.activity .con .img{
-  height: 100px;
-  width: 130px;
+.list .con .img{
+  height: 110px;
+  width: 140px;
   margin-right:10px;
 } 
 
 .title{
   font-size:18px;
-  text-align:center;
+  text-align:left;
   padding: 10px 0;
  border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
 }
@@ -44,32 +53,43 @@ swiper image{
 
 .time{
   font-size: 12px;
-  color: red;
+  color: #000000;
 }
 
 .help{
   position: absolute;
   bottom: 0;
   height: 20px;
-  margin-top: 10px;
 }
 
 .help li{
-  float: left;
-  margin-bottom: 10px;
+  display: inline-block;
 }
 
-.help .jieshao{
-  width: 20px;
-  height: 20px;
-}
+  .help .jieshao{
+    width: 20px;
+    height: 20px;
+  }
 
 .help .p{
-  margin-top: 2px;
+  margin-left: 5px;
 }
 
 .help .p text{
   font-size: 11px;
+}
+
+.attend div{
+  font-size: 14px;
+  color: #dbb86b;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 25px;
+  padding: 1px 10px;
+  background-color: #212124;
+  border-color: #212124;
+  margin-left: 20px;
 }
 
 

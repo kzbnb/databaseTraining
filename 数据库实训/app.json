@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/my/my",
     "pages/info/info", 
-    "pages/write_myInfo/write_myInfo"
+    "pages/write_myInfo/write_myInfo",
+    "pages/choose/choose"
   ],
   "usingComponents": {
     "i-grid": "/dist/grid/index",
