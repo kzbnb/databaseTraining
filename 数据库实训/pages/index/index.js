@@ -13,7 +13,6 @@ Page({
   id:'',
   openid:'',
   activityList:[]
-
   },
   
 

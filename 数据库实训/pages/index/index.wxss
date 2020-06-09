@@ -8,35 +8,11 @@ swiper image{
   width: 100%;
 }
 
-.header{
-  font-size:18px;
-  text-align:center;
-  padding: 10px 0;
- border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+.list{
+  padding: 15px;
 }
-.item{
-  padding-left: 5%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom:rgba(0, 0, 0, 0.1) 1px solid ;
-  display: flex;
-}
-.item text{
-  width: 30%;
-  border-right:rgba(0, 0, 0, 0.1) 1px solid;
-  margin-right:10px;
-  
-}
-.change{
-  margin-top: 20px;
-  width: 150px;
-  border-radius:25px ;
-  background-color:rgba(0, 0, 0, 0.1) 1px solid;
-  font-weight: 600;
-  font-size:16px;
-  
-}
-.kzb{
+
+.activity{
   display: flex;
   flex-direction: row;
   border-bottom:1rpx solid black;
@@ -47,4 +23,53 @@ swiper image{
   padding:10px;
   margin-bottom: 10px;
 }
+
+.activity .con .img{
+  height: 100px;
+  width: 130px;
+  margin-right:10px;
+} 
+
+.title{
+  font-size:18px;
+  text-align:center;
+  padding: 10px 0;
+ border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+.kzb{
+  position: relative;
+  width: 100%;
+}
+
+.time{
+  font-size: 12px;
+  color: red;
+}
+
+.help{
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.help li{
+  float: left;
+  margin-bottom: 10px;
+}
+
+.help .jieshao{
+  width: 20px;
+  height: 20px;
+}
+
+.help .p{
+  margin-top: 2px;
+}
+
+.help .p text{
+  font-size: 11px;
+}
+
 
