@@ -11,6 +11,16 @@ public class turn {
     String placeName;
     boolean earlyOrNoon;
     String date;
+
+    public Integer getAttendNum() {
+        return attendNum;
+    }
+
+    public void setAttendNum(Integer attendNum) {
+        this.attendNum = attendNum;
+    }
+
+    Integer attendNum;
     public Integer getTurn_id() {
         return turn_id;
     }

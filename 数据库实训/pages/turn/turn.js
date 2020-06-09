@@ -6,6 +6,7 @@ Page({
    */
   data: {
     turn:[],
+    id:''
   },
 
   /**
@@ -13,10 +14,14 @@ Page({
    */
   onLoad: function (options) {
     var that=this
+    that.setData({
+      id: options.id
+    })
+    console.log('test',that.data.id)
     wx.request({
       url: 'http://localhost:8080/showTurnByPlaceName',
       data:{
-        placeName:"珠江新城"
+        placeName:that.data.id
       },
       success(res){
         console.log(res)

@@ -14,6 +14,13 @@ Page({
   openid:'',
   activityList:[]
   },
+  goToShowTurns:function(options){
+    console.log(options)
+    let id=options.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../turn/turn?id='+id,
+    })
+  },
   
 
   /**
@@ -31,7 +38,7 @@ Page({
     var that=this;
       wx.request({
         //106.55.49.252
-        url: 'http://106.55.49.252:8080/showAllactivity',
+        url: 'http://localhost:8080/showAllactivity',
         success:function(res)
         {
             console.log(res);
