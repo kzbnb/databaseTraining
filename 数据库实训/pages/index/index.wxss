@@ -10,10 +10,13 @@ swiper image{
 
 .list{
   padding: 15px;
+}
+
+.activity{
   display: flex;
   flex-direction: row;
   border-bottom:1rpx solid black;
-  height:110px;
+  height:70px;
   position:relative;
   border: 1px rgba(0, 0, 0, 0.1) solid;
   border-radius: 5px;
@@ -21,21 +24,9 @@ swiper image{
   margin: 10px;
 }
 
-/* .activity{
-  display: flex;
-  flex-direction: row;
-  border-bottom:1rpx solid black;
-  height:120px;
-  position:relative;
-  border: 1px rgba(0, 0, 0, 0.1) solid;
-  border-radius: 5px;
-  padding:10px;
-  margin-bottom: 10px;
-} */
-
 .list .con .img{
-  height: 110px;
-  width: 140px;
+  height: 70px;
+  width: 70px;
   margin-right:10px;
 } 
 
@@ -57,6 +48,7 @@ swiper image{
 }
 
 .help{
+  width: 100%;
   position: absolute;
   bottom: 0;
   height: 20px;
@@ -75,11 +67,15 @@ swiper image{
   margin-left: 5px;
 }
 
-.help .p text{
+.help .p div{
   font-size: 11px;
 }
 
-.attend div{
+.attend {
+  float: right;
+}
+
+.help .attend div{
   font-size: 12px;
   color: #dbb86b;
   font-weight: 700;
@@ -89,7 +85,6 @@ swiper image{
   padding: 1px 10px;
   background-color: #212124;
   border-color: #212124;
-  margin-left: 8px;
 }
 
 
