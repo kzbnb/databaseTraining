@@ -38,7 +38,7 @@ Page({
     var that=this;
       wx.request({
         //106.55.49.252
-        url: 'http://localhost:8080/showAllactivity',
+        url: 'http://106.55.49.252:8080/showAllactivity',
         success:function(res)
         {
             console.log(res);

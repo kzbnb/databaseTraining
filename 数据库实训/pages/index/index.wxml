@@ -7,33 +7,31 @@
 </swiper>
 
 <view class="list">
-	<!-- <view class="activity" wx:for="{{activityList}}" wx:item ="activity" wx:key="this"> -->
-	 <view class="con"> <image class="img" src="/images/8.jpg" /> </view>
-	<view class="kzb">
-		<!-- <view  bindtap='onLoad' data-id="{{item.id}}">{{item.activity_id}}</view> -->
-    <view class="news-item" wx:for="{{activityList}}" wx:key="{{item.id}}" >
-	   <view class="title" bindtap="goToShowTurns" data-id="{{item.title}}">{{item.title}}</view>	
-     </view>
-
-     <!-- 注释掉yx的 -->
-		<!-- <view class="time">开始时间：2020.06.09    </view>
-		<view class="time">结束时间：2020.06.28    </view> -->
-        <view class="help">
-          <ul>
-                <li>
-                     <image class="jieshao" src="/images/user1.png" />
-                 </li>
-                 <li class="p">
-                     <text > 2/30</text>
-                </li>
-                <li class="attend" >
-                     <div>
-                        查看班次
-                     </div>
-                </li>
-              </ul>
-         </view> 
-	</view>
+	<view class="activity" wx:for="{{activityList}}" wx:key="this">
+	     <view class="con">
+            <image class="img" src="/images/sign.png" /> 
+         </view>
+        <view class="kzb">
+	         <view  bindtap='goToDetail' data-id="{{activity.id}}">
+	         <view class="title">{{item.title}}</view>	
+	        </view>
+             <view class="help">
+                 <ul>
+                     <li>
+                         <image class="jieshao" src="/images/user1.png" />
+                     </li>
+                     <li class="p">
+                         <div>{{item.attendNum}}/{{item.limit}}</div>
+                     </li>
+                     <li class="attend" >
+                        <div>
+                             查看班次
+                         </div>
+                     </li>
+                 </ul>
+             </view>
+         </view>
+    </view>
  </view>
 	<button bindtap="onReachBottom">加载更多</button>
 	
