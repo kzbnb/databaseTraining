@@ -33,7 +33,7 @@ Page({
     this.setData({
       stuNum: e.detail.value
     })
-    // console.log(e)
+    console.log(e)
   },
 
   //添加电话号码
@@ -41,7 +41,7 @@ Page({
     this.setData({
       tel: e.detail.value
     })
-    // console.log(e.detail.value)
+    console.log(e.detail.value)
   },
 
   // 添加班级
@@ -49,6 +49,7 @@ Page({
     this.setData({
       classNum: e.detail.value
     })
+    console.log(e.detail.value)
   },
 
   getopenid: function () {
@@ -70,6 +71,10 @@ Page({
     console.log('test:',this.data.name,this.data.stuNum,this.data.grade,this.data.tel,this.data.classNum)
     wx.request({
       url: 'http://106.55.49.252:8080/insertUserIntoDatabase',
+      header: {  
+        "Content-Type": "application/x-www-form-urlencoded"  
+      }, 
+      method:"POST", 
       data:{
         openid:this.data.openid,
         name:this.data.name,
@@ -81,11 +86,24 @@ Page({
       success(res){
         wx.showToast({
           title: '注册成功',
+          icon:"success",
+          image:"../../images/success.jpg",
+          duration:2000
         })
         wx.navigateBack({
-          
+          delta:1
         })
-      }
+      },
+      fail(){
+        wx.showToast({
+          title: '注册失败',
+          icon:'loading',
+          image:"../../images/fail.jpg",
+          duration:2000
+        })
+     }
+      
+
     })
   },
 
