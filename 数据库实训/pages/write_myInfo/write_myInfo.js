@@ -10,7 +10,12 @@ Page({
     tel: '',
     grade: '',
     classNum: '',
-    openid:''
+    openid:'',
+    warnName:'',
+    warnStu:'',
+    warnTel:'',
+    warnGrade:'',
+    warnClass:''
   },
 
   //添加姓名
@@ -107,6 +112,67 @@ Page({
     })
   },
 
+  noData1(){
+    if (this.data.name == ''){     
+      this.setData({
+        warnName:"您还未输入姓名"
+      })
+       }
+},
+  noData5(){
+   if (this.data.classNum == ''){     
+      this.setData({
+        warnClass:"您还未输入班级"
+      })
+    } 
+  },
+  noData2(){  
+    if (this.data.stuNum == ''){     
+      this.setData({
+        warnStu:"您还未输入学号"
+      })
+    }
+  },
+  noData3(){
+   if (this.data.tel == ''){     
+      this.setData({
+        warnTel:"您还未输入手机"
+      })
+    }
+  },
+  noData4(){
+    if (this.data.grade == ''){     
+      this.setData({
+        warnGrade:"您还未输入年级"
+      })
+    }
+  },
+
+  data1(){
+    this.setData({
+      warnName:''
+    })
+  },
+  data2(){
+    this.setData({
+      warnStu:''
+    })
+  },
+  data3(){
+    this.setData({
+      warnTel:''
+    })
+  },
+  data4(){
+    this.setData({
+      warnGrade:''
+    })
+  },
+  data5(){
+    this.setData({
+      warnClass:''
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/write_myInfo/write_myInfo",
+    "pages/info/info",
    "pages/index/index",
    "pages/turn/turn",
     "pages/my/my",
-    "pages/info/info",
     "pages/choose/choose"
 
   ],

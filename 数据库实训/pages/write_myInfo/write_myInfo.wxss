@@ -14,14 +14,32 @@
    border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
 }
 input{
-    height:50px;
-    width: 100%;
-    border-bottom:rgba(0, 0, 0, 0.1) 1px solid;
-    line-height: 50px;
-    font-size:16px;
+  height: 40rpx;
+  padding-top: 30rpx;
+  text-align: left;
+  width: 500rpx;
+  font-size:32rpx;
+  float:left;
 }
 .mes{
   color:red;
   font-size: 14px;
   float: right;
+}
+
+.warn{
+  float:right;
+  text-align: right;
+  color:red;
+  font-size:32rpx;
+}
+
+.left{
+  float:left;
+}
+.border{
+  height:100rpx;
+  width: 100%;
+  border-bottom:rgba(0, 0, 0, 0.1) 1px solid;
+  line-height: 100rpx;
 }
