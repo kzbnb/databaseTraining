@@ -1,7 +1,8 @@
 {
   "pages": [
-   "pages/index/index",
    "pages/turn/turn",
+   "pages/index/index",
+   
     "pages/my/my",
     "pages/info/info",
     "pages/write_myInfo/write_myInfo",
