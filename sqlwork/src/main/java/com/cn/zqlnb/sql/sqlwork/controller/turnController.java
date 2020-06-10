@@ -24,5 +24,22 @@ public class turnController {
         return turnJson;
     }
 
+    @RequestMapping("/getTurnByTurnId")
+    public Object getTurnByTurnId(Integer turn_id)
+    {
+        turn Turn=turnDao.getTurnByTurnId(turn_id);
+
+        return Turn;
+    }
+
+    @RequestMapping("/updateTurn")
+    public String updateTurn(turn Turn){
+        int count= turnDao.updateTurn(Turn);
+        if(count>0){
+            return "ok";
+        }
+        return "no";
+    }
+
 }
 

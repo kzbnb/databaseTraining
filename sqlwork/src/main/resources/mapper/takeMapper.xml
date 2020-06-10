@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.zqlnb.sql.sqlwork.dao.takeDao">
+
+    <select id="getTakesByOpenId" resultType="java.lang.Integer">
+    select turn_id from takes where _openid=#{openid}
+    </select>
+    <insert id="addTakes"   parameterType="com.cn.zqlnb.sql.sqlwork.pojo.take">
+    insert into takes (_openid,turn_id) values (#{Take.open_id},#{Take.turn_id})
+    </insert>
+</mapper>
