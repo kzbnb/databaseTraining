@@ -14,68 +14,68 @@ Page({
     openid: '',
     id: ''
   },
-  // changeMyInfo(e) {
-  //   let that = this
-  //   wx.cloud.callFunction({
-  //     name: "getOpenId",
-  //     success(res) {
-  //       let openId = res.result.openid
-  //       that.setData({
-  //         openid: openId
-  //       })
-  //       var userid = that.data.openid
-  //       // DB.where({
-  //       //   _openid: userid
-  //       // }).get({
-  //       //   success(res) {
-  //       //     if (res.data[0] == null) {
-  //       //       console.log("没在")
-  //       //       that.goToWriteMyInfo()
-  //       //     }
-  //       //     else {
-  //       //       var id1 = res.data[0]._id
-  //       //       that.setData({
-  //       //         id: id1
-  //       //       })
-  //       //       console.log(id1)
-  //       //       wx.navigateTo({
-  //       //         url: '/pages/changeInfo/changeInfo?id=' + id1,
-  //       //       })
-  //       //     }
-  //       //   },
-  //       //   fail(res) {
-  //       //     console.log("fail", res)
-  //       //   }
-  //       // })
-  //       wx.request({
-  //         url: 'http://localhost:8080/getUserRecord',
-  //         data:{
-  //           openid:userid
-  //         },
-  //         success(res) {
-  //           console.log("调用后端接口成功", res)
-  //           if (res.data == null) {
-  //             wx.navigateTo({
-  //               url: '../write_myInfo/write_myInfo',
-  //             })
-  //           }
-  //           else {
-  //             var id1 = res.data[0]._id
-  //             that.setData({
-  //               id: id1
-  //             })
-  //             console.log(id1)
-  //             wx.navigateTo({
-  //               url: '/pages/changeInfo/changeInfo?id=' + id1,
-  //             })
-  //           }
-  //         },
-  //         fail(res) {
-  //           console.log("调用后端接口失败", res)
-  //         }
-  //       })
+ /* changeMyInfo(e) {
+    let that = this
+    wx.cloud.callFunction({
+       name: "getOpenId",
+       success(res) {
+         let openId = res.result.openid
+         that.setData({
+           openid: openId
+         })
+         var userid = that.data.openid
+         DB.where({
+            _openid: userid
+          }).get({  
+            success(res) {
+              if (res.data[0] == null) {
+                console.log("没在")
+                that.goToWriteMyInfo()
+              }
+              else {
+                var id1 = res.data[0]._id
+                that.setData({
+                  id: id1
+                })
+                console.log(id1)
+                wx.navigateTo({
+                  url: '/pages/changeInfo/changeInfo?id=' + id1,
+                })
+              }
+            },
+            fail(res) {
+              console.log("fail", res)
+            }
+          })
+         wx.request({
+           url: 'http://localhost:8080/getUserRecord',
+           data:{
+             openid:userid
+           },
+           success(res) {
+             console.log("调用后端接口成功", res)
+             if (res.data == null) {
+               wx.navigateTo({
+                 url: '../write_myInfo/write_myInfo',
+               })
+             }
+             else {
+               var id1 = res.data[0]._id
+               that.setData({
+                 id: id1
+               })
+               console.log(id1)
+               wx.navigateTo({
+                 url: '/pages/changeInfo/changeInfo?id=' + id1,
+               })
+             }
+           },
+           fail(res) {
+             console.log("调用后端接口失败", res)
+           }
+         })
 
-  // },
+   },*/
   /**
    * 生命周期函数--监听页面加载
    */

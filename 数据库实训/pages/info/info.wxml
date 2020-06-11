@@ -22,5 +22,8 @@
     <text class="title">班级:</text>
     <text class="value">{{userclass}}</text>
   </view>
+    <view>
+    <button class="change">修改个人信息</button>
+  </view>
 </view>
 
