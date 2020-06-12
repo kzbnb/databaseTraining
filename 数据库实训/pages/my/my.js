@@ -64,6 +64,29 @@ Page({
       this.getUserRecord()
     }
   },
+
+
+
+  goToback:function () {
+    console.log(app.globalData.hasLogin)
+    if (app.globalData.hasLogin) {
+      wx.navigateTo({
+        url: '/pages/back/back',
+      })
+    }
+    else {
+      wx.showModal({
+        title: '请先进行登录',
+        content: '请先登录',
+      })
+    }
+  },
+
+
+
+
+
+
   getUserRecord: function () {
     var that = this
     var userid = that.data.openid
@@ -71,7 +94,7 @@ Page({
     //调用后台接口查询该openid是否存在数据库内
     //106.55.49.252
     wx.request({
-      url: 'http://106.55.49.252:8080/getUserRecord',
+      url: 'http://localhost:8080/getUserRecord',
       data: {
         openid: userid
       },
