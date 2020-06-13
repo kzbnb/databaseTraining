@@ -65,7 +65,7 @@ Page({
       },success(res){
         console.log(res)
         let res1=res   
-        if(res.data.attendNum<res.data.limit){
+        if(res.data.attendNum<res.data.limitPeople){
 
           wx.request({
             url: 'http://localhost:8080/addTakes',
@@ -88,7 +88,7 @@ Page({
                     attendNum:res1.data.attendNum+1,
                     begin_time:res1.data.begin_time,
                     end_time:res1.data.end_time,
-                    limit:res1.data.limit,
+                    limitPeople:res1.data.limitPeople,
                     earlyOrNoon:res1.data.earlyOrNoon,
                     placeName:res1.data.placeName,
                     date:res1.data.date

@@ -11,4 +11,5 @@ public interface turnDao {
     public turn getTurnByTurnId(Integer turn_id);
     public int updateTurn(@Param("Turn")turn Turn);
     public int addTurn(turn turn );
+    public turn[] getTurnByActivityId(Integer activity_id);
 }

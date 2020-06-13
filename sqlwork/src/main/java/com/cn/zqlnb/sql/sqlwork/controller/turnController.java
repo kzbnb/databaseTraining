@@ -33,6 +33,15 @@ public class turnController {
         return Turn;
     }
 
+    @RequestMapping("/getTurnByActivityId")
+    public Object getTurnByActivityId(Integer activity_id)
+    {
+        System.out.println("getTurnByActivityId is"+activity_id);
+        turn[] Turn=turnDao.getTurnByActivityId(activity_id);
+
+        return Turn;
+    }
+
     @RequestMapping("/updateTurn")
     public String updateTurn(turn Turn){
         int count= turnDao.updateTurn(Turn);

@@ -12,6 +12,11 @@
     select * from turn where turn_id=#{turn_id}
     </select>
 
+
+    <select id="getTurnByActivityId" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+    select * from turn where activity_id=#{activity_id}
+    </select>
+
     <update id="updateTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
         update turn set attendNum=#{Turn.attendNum}
         where turn_id=#{Turn.turn_id}

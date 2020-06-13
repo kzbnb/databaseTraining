@@ -13,7 +13,7 @@
     </i-cell>
 
 
-      <i-cell title="导出名单" is-link bindtap="goToback">
+      <i-cell title="导出名单" is-link bindtap="goToexcel">
       <i-grid-icon  slot="icon">
             <image src="/images/user.png" />
       </i-grid-icon>

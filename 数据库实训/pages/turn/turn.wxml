@@ -18,7 +18,7 @@
              <image class='suo' src="/images/user.png"></image> 
           </li>
           <li class="person">
-             <text >{{item.attendNum}}/{{item.limit}}</text>
+             <text >{{item.attendNum}}/{{item.limitPeople}}</text>
           </li>
         </ul>
     </view>

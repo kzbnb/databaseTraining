@@ -18,6 +18,12 @@ Page({
         url: '/pages/addactivity/addactivity',
       })
     },
+    goToexcel :function () {
+    
+      wx.navigateTo({
+        url: '/pages/excel/excel',
+      })
+    },
 
 
 

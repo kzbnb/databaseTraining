@@ -1,16 +1,19 @@
 {
   "pages": [
-
-    "pages/addactivity/addactivity",
+    "pages/excel/excel",
+    "pages/myRecord/myRecord",
+    
     "pages/index/index",
     "pages/my/my",
- 
+    
+    "pages/addactivity/addactivity",
+   
     "pages/info/info",
     "pages/write_myInfo/write_myInfo",
     "pages/turn/turn",
     "pages/choose/choose",
-    "pages/back/back",
-    "pages/myRecord/myRecord"
+    "pages/back/back"
+    
   ],
   "usingComponents": {
     "i-grid": "/dist/grid/index",
