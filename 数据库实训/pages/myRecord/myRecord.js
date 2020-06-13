@@ -1,5 +1,6 @@
 // pages/myRecord/myRecord.js
 var app = getApp()
+
 Page({
 
   /**
@@ -8,7 +9,9 @@ Page({
   data: {
   openid:'',
   takes:[],
-  myTurn:[]
+  myTurn:[],
+  isOk:false,
+  a:0
   },
   //获取openId
   getopenid: function () {
@@ -31,23 +34,22 @@ Page({
   getTurnByTurnId: function () {
     //根据班次id去获取班次内容
     let that = this
-    console.log("enter this function")
-
-    for (let i = 0; i < that.data.takes.length; i++) {
+    console.log("takes",this.data.takes)
+    var idArray=JSON.stringify(this.data.takes)
+    console.log(idArray)
       wx.request({
-        url: 'http://localhost:8080/getTurnByTurnId',
+        url: 'http://localhost:8080/getTurnByTurnIdArray',
         data: {
-          turn_id: that.data.takes[i]
+          turn_id: idArray
         },
         success(res) {
           console.log(res)
-          that.data.myTurn.push(res.data)
         },
         fail(res) {
           console.log("后端调用失败", res)
         }
       })
-    }
+
   },
   getTurnId:function(){
     //先获取报名的班次id
@@ -63,13 +65,12 @@ Page({
           takes: res.data
         })
         that.getTurnByTurnId()
-        that.onReady()
       }
     })
-
+   
   },
   
-  getTurnByTurn:function(){console.log(this.data.myTurn)},
+  getTurnByTurn:function(){this.onReady()},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -77,6 +78,7 @@ Page({
     // this.getopenid()
     let that = this
     that.getTurnId()
+    
   },
 
   /**

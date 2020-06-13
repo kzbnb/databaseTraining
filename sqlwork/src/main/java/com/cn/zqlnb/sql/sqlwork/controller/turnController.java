@@ -5,6 +5,7 @@ import com.cn.zqlnb.sql.sqlwork.dao.turnDao;
 
 import com.cn.zqlnb.sql.sqlwork.pojo.turn;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,6 +32,14 @@ public class turnController {
         turn Turn=turnDao.getTurnByTurnId(turn_id);
 
         return Turn;
+    }
+    @RequestMapping("/getTurnByTurnIdArray")
+    public Object getTurnByTurnIdArray(@RequestBody(required = false) List<Integer> turn_id)
+    {
+        System.out.println("turn_id is"+turn_id);
+        List<turn> Turn=turnDao.getTurnByTurnIdArray(turn_id);
+        String turnJson=JSON.toJSONString(Turn);
+        return turnJson;
     }
 
     @RequestMapping("/getTurnByActivityId")

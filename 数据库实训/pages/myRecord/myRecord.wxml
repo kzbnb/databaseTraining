@@ -6,10 +6,7 @@
         <view class="title"> 站点：{{item.placeName}}</view>
         <view class="time">活动时间：{{item.begin_time}}--{{item.end_time}}</view>
         <view class="time">截止报名时间:活动前一天</view>
-
         <button  bindtap="quit" data-id="{{item.turn_id}}">退选</button>
-
-  
     </view>
     <view class="fuzhu">
         <ul>
@@ -24,8 +21,7 @@
     
     </view>
   </view>
- 
 </view>
 <!-- <button bindtap="getTurnId">getTurnId</button>
-<button bindtap="getTurnByTurnId">getTurnByTurnId</button>
-<button bindtap="getTurnByTurn">getTurnByTurn</button> -->
+<button bindtap="getTurnByTurnId">getTurnByTurnId</button> -->
+<!-- <button bindtap="getTurnByTurn">getTurnByTurn</button> -->
