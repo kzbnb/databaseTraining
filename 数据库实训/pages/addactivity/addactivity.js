@@ -166,21 +166,18 @@ ddlY:e.detail.year
 
   addTurn:function(event)
   {
-/*
-    console.log(this.data);
     wx.request({
       url: 'http://localhost:8080/addTurn',
       data:{
-        turn_id:'a'+"0",
-        //turn_id:this.data.id+"0",
-       // limit:this.data.limit, 
-       limit:5, 
+       turn_id:parseInt(this.data.id+"0"),
+        limitPeople:this.data.limit, 
         begin_time:this.data.addMorningStartTime, 
         end_time:this.data.addMorningEndTime, 
-        placeName:this.data.place, 
+        detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
         earlyOrNoon:0, 
         attendNum:0, 
-        date:this.data.id
+        placeName:this.data.place,
+        activity_id:this.data.id
       },
       success:function(res){
         console.log(res);
@@ -188,7 +185,7 @@ ddlY:e.detail.year
 
       
     })
-*/
+
     console.log(this.data);
     wx.request({
       url: 'http://localhost:8080/addTurn',
@@ -217,7 +214,7 @@ ddlY:e.detail.year
   uploadActivity:function(event)
   {
       console.log(this.data)
-     // this.addActivity();
+      this.addActivity();
       this.addTurn()
 
 

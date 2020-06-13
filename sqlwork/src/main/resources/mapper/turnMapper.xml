@@ -18,8 +18,8 @@
     </update>
 
     <insert id="addTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
-    insert into turn(turn_id, limitPeople, begin_time, end_time, placeName, earlyOrNoon, attendNum, detailDate)
-     values(#{turn_id},#{limitPeople},#{begin_time},#{end_time},#{placeName},#{earlyOrNoon},#{attendNum},#{detailDate})
+    insert into turn(turn_id, limitPeople, begin_time, end_time, placeName, earlyOrNoon, attendNum, detailDate,activity_id)
+     values(#{turn_id},#{limitPeople},#{begin_time},#{end_time},#{placeName},#{earlyOrNoon},#{attendNum},#{detailDate},#{activity_id})
     </insert>
 
     <select id="getTurnByTurnIdArray"  parameterType="java.util.List" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
