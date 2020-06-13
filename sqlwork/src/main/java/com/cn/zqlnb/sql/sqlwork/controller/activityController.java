@@ -24,6 +24,20 @@ public class activityController {
         return actvityJson;
     }
 
+    @RequestMapping("/addActivity")
+    public String addActivity(activity activity )
+    {
+            int count=activityDao.addActivity(activity);
+            //
+        if(count>0)
+        {
+            return "ok";
+        }
+
+
+        return "no";
+    }
+
 
 
 }
