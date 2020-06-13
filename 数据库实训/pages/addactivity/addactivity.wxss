@@ -1,1 +1,59 @@
-/* pages/addactivity/addactivity.wxss */
+/* pages/addactivity/addactivity.wxss *//* pages/addActivity/addActivity.wxss */
+.header{
+  font-size:18px;
+  text-align:center;
+  padding: 10px 0;
+ border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+.textarea-bg {
+  
+  font-size: 15px;
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.title-bg {
+  padding-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.photo{
+  height: 270px;
+  width: 90%;
+  border:rgba(0, 0, 0, 0.1) 1px dotted ;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.father_view{
+  border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+.sub {
+  font-size: 39rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 40px;
+}
+.item{
+  padding-left: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom:rgba(0, 0, 0, 0.1) 1px solid ;
+  display: flex;
+}
+.item text{
+  width: 40%;
+  
+  border-right:rgba(0, 0, 0, 0.1) 1px solid;
+  margin-right:10px;
+}
+.upload{
+  margin-bottom: 50px;
+}

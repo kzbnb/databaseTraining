@@ -14,4 +14,8 @@
     select * from activity
     </select>
 
+    <insert id="addActivity" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.activity">
+    insert into activity(activity_id,title) values(#{activity_id},#{title})
+    </insert>
+
 </mapper>

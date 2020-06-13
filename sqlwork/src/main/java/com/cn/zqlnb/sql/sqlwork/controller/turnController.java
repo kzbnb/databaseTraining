@@ -42,5 +42,19 @@ public class turnController {
         return "no";
     }
 
+    @RequestMapping("/addTurn")
+    public String addTurn(turn turn )
+    {
+        int count=turnDao.addTurn(turn);
+        //
+        if(count>0)
+        {
+            return "ok";
+        }
+
+
+        return "no";
+    }
+
 }
 

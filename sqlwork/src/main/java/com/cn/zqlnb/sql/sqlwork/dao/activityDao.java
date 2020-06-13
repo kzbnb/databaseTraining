@@ -7,4 +7,5 @@ import java.util.List;
 public interface activityDao {
     //查所有
     public List<activity> getAllactivity();
+    public int addActivity(activity activity );
 }

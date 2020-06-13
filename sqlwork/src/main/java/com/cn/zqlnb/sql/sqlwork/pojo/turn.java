@@ -5,12 +5,38 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class turn {
     Integer turn_id;
-    Integer limit;
+
+    public Integer getLimitPeople() {
+        return limitPeople;
+    }
+
+    public void setLimitPeople(Integer limitPeople) {
+        this.limitPeople = limitPeople;
+    }
+
+    Integer limitPeople;
     String begin_time;
     String end_time;
     String placeName;
     boolean earlyOrNoon;
-    String date;
+    String detailDate;
+    int activity_id;
+
+    public int getActivity_id() {
+        return activity_id;
+    }
+
+    public void setActivity_id(int activity_id) {
+        this.activity_id = activity_id;
+    }
+
+    public String getDetailDate() {
+        return detailDate;
+    }
+
+    public void setDetailDate(String detailDate) {
+        this.detailDate = detailDate;
+    }
 
     public Integer getAttendNum() {
         return attendNum;
@@ -29,13 +55,7 @@ public class turn {
         this.turn_id = turn_id;
     }
 
-    public Integer getLimit() {
-        return limit;
-    }
 
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
 
     public String getBegin_time() {
         return begin_time;
@@ -67,14 +87,6 @@ public class turn {
 
     public void setEarlyOrNoon(boolean earlyOrNoon) {
         this.earlyOrNoon = earlyOrNoon;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
 

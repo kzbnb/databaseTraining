@@ -14,3 +14,55 @@
   bind:whenChangeMonth="whenChangeMonth"
   bind:afterCalendarRender="afterCalendarRender"
 ></calendar>
+
+<view class="header">
+	<text>添加活动</text>
+</view>
+<view class="form">
+	<view class="item">
+		<text>活动名称</text>
+		<input bindinput="addName"></input>
+	</view>
+	<view class="item">
+		<text>活动id</text>
+		<input bindinput="addId"></input>
+	</view>
+	<view class="item">
+		<text>活动人数上限</text>
+		<input bindinput="addNumberLimit"></input>
+	</view>
+	<view class="item">
+		<text>活动地点</text>
+		<input bindinput="addPlace"></input>
+	</view>
+
+	<view class="item">
+		<text>活动日子</text>
+		<input placeholder="如2020.02.02" bindinput="addTime"></input>
+	</view>
+
+	<view class="item">
+		<text>活动早班具体开始时间</text>
+		<input placeholder="如8:00" bindinput="addMorningStartTime"></input>
+	</view>
+
+  	<view class="item">
+		<text>活动早班具体结束时间</text>
+		<input placeholder="如12:00" bindinput="addMorningEndTime"></input>
+	</view>
+
+  	<view class="item">
+		<text>活动午班具体开始时间</text>
+		<input placeholder="如14:00" bindinput="addNoonStartTime"></input>
+	</view>
+
+  	<view class="item">
+		<text>活动午班具体结束时间</text>
+		<input placeholder="如18:00" bindinput="addNoonEndTime"></input>
+	</view>
+
+  
+
+</view>
+
+<button bindtap='uploadActivity' class='sub'>上传活动</button>
