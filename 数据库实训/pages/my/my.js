@@ -23,6 +23,20 @@ Page({
   }
 })
 },
+  goToMyRecord: function () {
+    if (app.globalData.hasLogin) {
+      wx.navigateTo({
+        url: '/pages/myRecord/myRecord',
+      })
+    }
+    else {
+      wx.showModal({
+        title: '请先进行登录',
+        content: '请先登录',
+      })
+    }
+
+  },
   logOff: function () {
     app.globalData.hasLogin = false;
     this.setData({

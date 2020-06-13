@@ -1,5 +1,6 @@
 package com.cn.zqlnb.sql.sqlwork.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.cn.zqlnb.sql.sqlwork.dao.takeDao;
 import com.cn.zqlnb.sql.sqlwork.pojo.take;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,9 @@ public class takeController {
 
     @RequestMapping("/getTakesByOpenId")
     public  Object getTakesByOpenId(String openid){
-        System.out.println("openid is"+openid);
+        System.out.println("gettakes openid is"+openid);
         List<Integer> takes =takeDao.getTakesByOpenId(openid);
+//        String takeJson= JSON.toJSONString((takes));
         return takes;
     };
 

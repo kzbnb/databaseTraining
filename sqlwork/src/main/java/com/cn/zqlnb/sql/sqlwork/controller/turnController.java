@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 public class turnController {
-    @Autowired
+    @Autowired(required = false)
     turnDao turnDao;
 
     @RequestMapping("/showTurnByPlaceName")
@@ -27,6 +27,7 @@ public class turnController {
     @RequestMapping("/getTurnByTurnId")
     public Object getTurnByTurnId(Integer turn_id)
     {
+        System.out.println("turn_id is"+turn_id);
         turn Turn=turnDao.getTurnByTurnId(turn_id);
 
         return Turn;
