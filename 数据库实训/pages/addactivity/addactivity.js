@@ -197,10 +197,11 @@ ddlY:e.detail.year
         limitPeople:this.data.limit, 
         begin_time:this.data.addNoonStartTime, 
         end_time:this.data.addNoonEndTime, 
-        detaildate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
+        detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
         earlyOrNoon:1, 
         attendNum:0, 
-        placeName:this.data.place
+        placeName:this.data.place,
+        activity_id:this.data.id
       },
       success:function(res){
         console.log(res);

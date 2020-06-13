@@ -20,6 +20,15 @@ public class turn {
     String placeName;
     boolean earlyOrNoon;
     String detailDate;
+    int activity_id;
+
+    public int getActivity_id() {
+        return activity_id;
+    }
+
+    public void setActivity_id(int activity_id) {
+        this.activity_id = activity_id;
+    }
 
     public String getDetailDate() {
         return detailDate;
