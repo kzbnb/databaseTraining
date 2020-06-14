@@ -10,8 +10,7 @@ Page({
   openid:'',
   takes:[],
   myTurn:[],
-  isOk:false,
-  a:0
+
   },
   //获取openId
   getopenid: function () {
@@ -29,14 +28,27 @@ Page({
     })
   },
   quit:function(options){
-
+    let that=this
+    var id=options.currentTarget.dataset.id
+    wx.request({
+      url: 'http://localhost:8080/deleteTakes',
+      data:{
+        _openid:app.globalData.openid,
+        turn_id:id
+      },success(res){
+        console.log("delete success",res)
+        wx.redirectTo({
+          url: "../myRecord/myRecord"
+        })
+      }
+    })
   },
   getTurnByTurnId: function () {
     //根据班次id去获取班次内容
     let that = this
     console.log("takes",this.data.takes)
     var idArray=JSON.stringify(this.data.takes)
-    console.log(idArray)
+    
       wx.request({
         url: 'http://localhost:8080/getTurnByTurnIdArray',
         data: {
@@ -44,6 +56,9 @@ Page({
         },
         success(res) {
           console.log(res)
+          that.setData({
+            myTurn:res.data
+          })
         },
         fail(res) {
           console.log("后端调用失败", res)

@@ -30,4 +30,13 @@ public class takeController {
             return "ok";
         return "no";
     };
+
+    @RequestMapping("/deleteTakes")
+    public  String deleteTakes(take Take){
+        System.out.println("openid is"+Take.getOpen_id()+"turn_id is"+Take.getTurn_id());
+        int count =takeDao.deleteTakes(Take);
+        if(count>0)
+            return "ok";
+        return "no";
+    };
 }

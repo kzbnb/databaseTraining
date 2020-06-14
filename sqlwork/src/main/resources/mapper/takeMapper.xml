@@ -10,4 +10,8 @@
     <insert id="addTakes"   parameterType="com.cn.zqlnb.sql.sqlwork.pojo.take">
     insert into takes (_openid,turn_id) values (#{Take.open_id},#{Take.turn_id})
     </insert>
+
+    <delete id="deleteTakes" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.take">
+        delete from takes where turn_id=#{Take.turn_id}
+    </delete>
 </mapper>

@@ -1,4 +1,5 @@
 // pages/activity/activity.js
+var app=getApp()
 Page({
 
   /**
@@ -6,7 +7,7 @@ Page({
    */
   data: {
     turn:[],
-    id:'广州塔',
+    id:'',
     openid:'',
     takes:[],
   },
@@ -45,6 +46,12 @@ Page({
 
   participate:function(options){
     console.log(options)
+    if(!app.globalData.hasLogin){
+      wx.showModal({
+        title: '你还未登录',
+        content: '请先登录',
+      })
+    }else{
     this.getTakes()
     for(var i=0;i<this.data.takes.length;i++){
       if(options.currentTarget.dataset.id==this.data.takes[i]){
@@ -109,7 +116,7 @@ Page({
       }
       }
     })
-
+    }
   },
 
   /**
@@ -118,9 +125,9 @@ Page({
   onLoad: function (options) {
     this.getopenid()
     var that=this
-    // that.setData({
-    //   id: options.id
-    // })
+    that.setData({
+      id: options.id
+    })
     console.log('test',that.data.id)
     wx.request({
       url: 'http://localhost:8080/showTurnByPlaceName',

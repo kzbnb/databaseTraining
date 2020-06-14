@@ -28,4 +28,3 @@
  
 </view>
 <button bindtap="addMore">加载更多</button>
-<button bindtap="getTakes">try</button>

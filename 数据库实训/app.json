@@ -1,9 +1,7 @@
 {
   "pages": [
-
-    "pages/excel/excel",
-
-      "pages/my/my",
+    "pages/my/my",
+    "pages/excel/excel", 
    "pages/myRecord/myRecord",
     "pages/addactivity/addactivity",
     "pages/index/index",

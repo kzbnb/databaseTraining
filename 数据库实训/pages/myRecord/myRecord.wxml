@@ -1,10 +1,10 @@
 
 <view class="news-list">
-  <view class="news-item" wx:for="{{myTurn}}" wx:key="{{item.turn_id}}" >
+  <view class="news-item" wx:for="{{myTurn}}" wx:key="{{item.id}}" >
    <view class="rongqi">
     <view  >
         <view class="title"> 站点：{{item.placeName}}</view>
-        <view class="time">活动时间：{{item.begin_time}}--{{item.end_time}}</view>
+        <view class="time">活动时间：{{item.detailDate}}--{{item.begin_time}}--{{item.end_time}}</view>
         <view class="time">截止报名时间:活动前一天</view>
         <button  bindtap="quit" data-id="{{item.turn_id}}">退选</button>
     </view>
@@ -14,11 +14,11 @@
              <image class='suo' src="/images/user.png"></image> 
           </li>
           <li class="person">
-             <text >{{item.attendNum}}/{{item.limit}}</text>
+             <text >{{item.attendNum}}/{{item.limitPeople}}</text>
           </li>
         </ul>
     </view>
-    
+
     </view>
   </view>
 </view>

@@ -8,4 +8,5 @@ import java.util.List;
 public interface takeDao {
     public List<Integer> getTakesByOpenId(String openid);
     public int addTakes(@Param("Take") take Take);
+    public int deleteTakes(@Param("Take") take Take);
 }
