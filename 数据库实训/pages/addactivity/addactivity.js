@@ -4,7 +4,17 @@
 
 Page({
 
-
+  clone:function(){
+    var group_div=1;
+ function add_group(){
+   var e=document.createElementById("group");
+   var div=document.createElement("div");
+   div.id="group"+group_div;
+   div.innerHTML=e.innerHTML;
+   document.getElementById("form").appendChild(div);
+   group_div++;
+  }
+},
  
 
 
@@ -221,6 +231,7 @@ ddlY:e.detail.year
 
 
   },
+
 
   
   /**

@@ -23,12 +23,12 @@
     </i-cell>
       <i-cell title="我的报名" is-link bindtap="goToMyRecord" >
          <i-grid-icon  slot="icon">
-            <image src="/images/like.png" />
+            <image src="/images/wodebaoming.png" />
         </i-grid-icon>
     </i-cell>
       <i-cell title="后台功能" is-link bindtap="goToback">
       <i-grid-icon  slot="icon">
-            <image src="/images/user.png" />
+            <image src="/images/houtai.png" />
       </i-grid-icon>
     </i-cell>
    

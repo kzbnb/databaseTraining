@@ -28,18 +28,23 @@
 		<input bindinput="addId"></input>
 	</view>
 	<view class="item">
-		<text>活动人数上限</text>
+		<text>活动人数</text>
 		<input bindinput="addNumberLimit"></input>
 	</view>
-	<view class="item">
-		<text>活动地点</text>
-		<input bindinput="addPlace"></input>
-	</view>
 
-	<view class="item">
-		<text>活动日子</text>
+<view>
+<form id="form" role="form" method="post">
+	<div class="item" id="group">
+		<text>活动地点</text>
+		<input class="shijiandidian" bindinput="addPlace"></input>
+		<button type="button" onlick="add_group()">添加</button>
+	</div>
+	<div class="item" id="group">
+		<text>活动日期</text>
 		<input placeholder="如2020.02.02" bindinput="addTime"></input>
-	</view>
+	</div>
+	</form>
+</view>
 
 	<view class="item">
 		<text>活动早班具体开始时间</text>
@@ -60,8 +65,6 @@
 		<text>活动午班具体结束时间</text>
 		<input placeholder="如18:00" bindinput="addNoonEndTime"></input>
 	</view>
-
-  
 
 </view>
 
