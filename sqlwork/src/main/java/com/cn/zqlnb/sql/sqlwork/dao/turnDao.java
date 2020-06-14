@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 public interface turnDao {
-    public List<turn> getTurnByPlaceName(String placeName);
+    public List<turn> getTurnByPlaceName(String placeName,Integer activity_id);
     public turn getTurnByTurnId(Integer turn_id);
+    public List<turn> getTurnByDate(String date,Integer activity_id);
+    public List<turn> getTurnByPlaceNameAndDate(String placeName,String date,Integer activity_id);
+
     public int updateTurn(@Param("Turn")turn Turn);
     public int addTurn(turn turn );
 

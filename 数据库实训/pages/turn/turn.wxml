@@ -1,3 +1,7 @@
+
+<input value="{{place}}" type="text" title="站点"  bindinput="getPlace" placeholder="站点名称 如：“珠江新城" />
+<input value="{{date}}" type="text" title="日期"  bindinput="getDate" placeholder="日期 如： 2020.08.01" />
+<button bindtap="search">搜索</button>
 <view class="news-list">
   <view class="news-item" wx:for="{{turn}}" wx:key="{{item.id}}" >
    <view class="rongqi">
@@ -6,7 +10,6 @@
         <view class="time">活动时间：{{item.begin_time}}--{{item.end_time}}</view>
         <view class="time">截止报名时间:活动前一天</view>
         <button  bindtap="participate" data-id="{{item.turn_id}}">报名</button>
-        <button  bindtap="quit" data-id="{{item.turn_id}}">退选</button>
 <!-- 
 			<button wx:if='{{isAdd}}' "  bindtap="run_away" >退选</button>
 			<button wx:if='{{!isAdd}}' hover-class="true" plain bindtap="participate_in">点击报名</button> -->

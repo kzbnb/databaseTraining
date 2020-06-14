@@ -5,13 +5,19 @@
 <mapper namespace="com.cn.zqlnb.sql.sqlwork.dao.turnDao">
 
     <select id="getTurnByPlaceName" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
-    select * from turn where placeName=#{placeName}
+    select * from turn where placeName=#{placeName} and activity_id=#{activity_id}
+    </select>
+    <select id="getTurnByDate" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+        select*from turn where detailDate=#{date} and activity_id=#{activity_id}
     </select>
 
     <select id="getTurnByTurnId" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
     select * from turn where turn_id=#{turn_id}
     </select>
 
+    <select id="getTurnByPlaceNameAndDate" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+     select * from turn where detailDate=#{date} and placeName=#{placeName} and activity_id=#{activity_id}
+     </select>
 
     <select id="getTurnByActivityId" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
     select * from turn where activity_id=#{activity_id}

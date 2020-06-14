@@ -7,10 +7,79 @@ Page({
    */
   data: {
     turn:[],
-    id:'',
+    id:'1',
     openid:'',
     takes:[],
+    place:"",
+    date:""
   },
+  getPlace:function(e){
+    this.setData({
+      place:e.detail.value
+    })
+  },
+
+  getDate: function (e) {
+    this.setData({
+      date: e.detail.value
+    })
+  },
+
+  search:function(){
+    //3种情况 只填了站点/时间 /都填了
+    let that=this
+    if(this.data.place==""&&this.data.date==""){
+      wx.showToast({
+        title: '搜点啥吧',
+      })
+    }
+    else if(this.data.date==""){
+      wx.request({
+        url: 'http://localhost:8080/getTurnByPlaceName',
+        data:{
+          placeName:this.data.place,
+          activity_id:this.data.id
+        },success(res){
+          console.log(res)
+          that.setData({
+            turn:res.data
+          })
+        }
+      })
+    }
+    else if(this.data.place==""){
+      wx.request({
+        url: 'http://localhost:8080/getTurnByDate',
+        data: {
+          date: this.data.date,
+          activity_id: this.data.id
+        }, success(res) {
+          console.log(res)
+          that.setData({
+            turn: res.data
+          })
+        }
+      })
+    }
+    else{
+      wx.request({
+        url: 'http://localhost:8080/getTurnByPlaceNameAndDate',
+        data: {
+          date: this.data.date,
+          placeName: this.data.place,
+          activity_id: this.data.id
+        }, success(res) {
+          console.log(res)
+          that.setData({
+            turn: res.data
+          })
+        }
+      })
+    }
+
+
+  },
+
   //大致流程，先通过函数调去takes表中该用户报名的记录，存在数组里，显示的时候根据匹配数组内容显示
   //获取openId
   getopenid: function () {

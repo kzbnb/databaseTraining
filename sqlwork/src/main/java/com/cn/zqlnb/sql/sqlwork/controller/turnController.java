@@ -18,14 +18,32 @@ public class turnController {
     @Autowired(required = false)
     turnDao turnDao;
 
-    @RequestMapping("/showTurnByPlaceName")
-    public Object showTurnByPlaceName(String placeName)
+    @RequestMapping("/getTurnByPlaceName")
+    public Object showTurnByPlaceName(String placeName,Integer activity_id)
     {
-        List<turn> turns=turnDao.getTurnByPlaceName(placeName);
+        List<turn> turns=turnDao.getTurnByPlaceName(placeName,activity_id);
         String turnJson= JSON.toJSONString(turns);
         System.out.println("turnJson"+turnJson);
         return turnJson;
     }
+    @RequestMapping("/getTurnByDate")
+    public Object getTurnByDate(String date,Integer activity_id)
+    {
+        List<turn> turns=turnDao.getTurnByDate(date,activity_id);
+        String turnJson= JSON.toJSONString(turns);
+        System.out.println("turnJson"+turnJson);
+        return turnJson;
+    }
+    @RequestMapping("/getTurnByPlaceNameAndDate")
+    public Object getTurnByPlaceNameAndDate(String placeName,String date,Integer activity_id)
+    {
+        List<turn> turns=turnDao.getTurnByPlaceNameAndDate(placeName,date,activity_id);
+        String turnJson= JSON.toJSONString(turns);
+        System.out.println("turnJson"+turnJson);
+        return turnJson;
+    }
+
+
 
     @RequestMapping("/getTurnByTurnId")
     public Object getTurnByTurnId(Integer turn_id)
