@@ -1,0 +1,22 @@
+<i-cell-group>
+
+    <i-cell title="增加活动" is-link bindtap="goToaddactivity">
+      <i-grid-icon  slot="icon">
+            <image src="/images/user.png" />
+      </i-grid-icon>
+    </i-cell>
+
+      <i-cell title="删除活动" is-link bindtap="goTodeleteactivity">
+      <i-grid-icon  slot="icon">
+            <image src="/images/user.png" />
+      </i-grid-icon>
+    </i-cell>
+
+
+      <i-cell title="导出名单" is-link bindtap="goToexcel">
+      <i-grid-icon  slot="icon">
+            <image src="/images/user.png" />
+      </i-grid-icon>
+    </i-cell>
+   
+</i-cell-group>

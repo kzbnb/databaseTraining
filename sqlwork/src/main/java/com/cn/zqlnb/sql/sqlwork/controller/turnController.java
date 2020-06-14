@@ -2,9 +2,12 @@ package com.cn.zqlnb.sql.sqlwork.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.cn.zqlnb.sql.sqlwork.dao.turnDao;
-
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import com.cn.zqlnb.sql.sqlwork.pojo.turn;
+import net.sf.json.JsonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +15,7 @@ import java.util.List;
 
 @RestController
 public class turnController {
-    @Autowired
+    @Autowired(required = false)
     turnDao turnDao;
 
     @RequestMapping("/showTurnByPlaceName")
@@ -27,7 +30,27 @@ public class turnController {
     @RequestMapping("/getTurnByTurnId")
     public Object getTurnByTurnId(Integer turn_id)
     {
+        System.out.println("turn_id is"+turn_id);
         turn Turn=turnDao.getTurnByTurnId(turn_id);
+
+        return Turn;
+    }
+    @RequestMapping("/getTurnByTurnIdArray")
+    public Object getTurnByTurnIdArray( String turn_id)
+    {
+        System.out.println("turn_id is"+turn_id);
+        JSONArray json= JSONArray.fromObject(turn_id);
+        List<Integer>turnArray=(List<Integer>)JSONArray.toCollection(json,Integer.class);
+        List<turn> Turn=turnDao.getTurnByTurnIdArray(turnArray);
+        String turnJson=JSON.toJSONString(Turn);
+        return turnJson;
+    }
+
+    @RequestMapping("/getTurnByActivityId")
+    public Object getTurnByActivityId(Integer activity_id)
+    {
+        System.out.println("getTurnByActivityId is"+activity_id);
+        turn[] Turn=turnDao.getTurnByActivityId(activity_id);
 
         return Turn;
     }
@@ -38,6 +61,20 @@ public class turnController {
         if(count>0){
             return "ok";
         }
+        return "no";
+    }
+
+    @RequestMapping("/addTurn")
+    public String addTurn(turn turn )
+    {
+        int count=turnDao.addTurn(turn);
+        //
+        if(count>0)
+        {
+            return "ok";
+        }
+
+
         return "no";
     }
 

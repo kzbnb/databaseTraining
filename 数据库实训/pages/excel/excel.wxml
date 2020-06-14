@@ -1,0 +1,23 @@
+<view class="header">
+	<text>导出专用</text>
+</view>
+<view class="item">
+		<text>活动id</text>
+		<input bindinput="getActivityId" ></input>
+	</view>
+<button bindtap="getinput"  class="change">查询turnid</button>
+
+ <view wx:for="{{turns}}"  >
+    <view class="container">
+    {{item.turn_id}}{{item.begin_time}}{{item.end_time}}{{item.placeName}}{{item.earlyOrNoon}}
+    </view>   
+    </view>
+
+    <view class="item">
+		<text>turnid</text>
+		<input bindinput="getturnId"  ></input>
+	</view>
+<button bindtap="getExcel"  class="change">导出</button>
+    
+
+<button bindtap="copy" class="change">复制下载链接</button>

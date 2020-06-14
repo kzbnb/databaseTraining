@@ -1,27 +1,33 @@
-// pages/index/index.js
+// pages/back/back.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    swiperImg:[
-      {src:"/images/8.jpg"},
-      {src :"/images/shouye3.jpg"}
-    ],
-  name:'',
-  id:'',
-  openid:'',
-  activityList:[]
+
   },
-  goToShowTurns:function(options){
-    console.log(options)
-    let id=options.currentTarget.dataset.id
-    wx.navigateTo({
-      url: '../turn/turn?id='+id,
-    })
-  },
-  
+
+
+
+
+
+  goToaddactivity :function () {
+    
+      wx.navigateTo({
+        url: '/pages/addactivity/addactivity',
+      })
+    },
+    goToexcel :function () {
+    
+      wx.navigateTo({
+        url: '/pages/excel/excel',
+      })
+    },
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -34,20 +40,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    //查所有activity
-    var that=this;
-      wx.request({
-        //106.55.49.252
-        url: 'http://localhost:8080/showAllactivity',
-        success:function(res)
-        {
-            console.log(res);
-            that.setData({
-              activityList:res.data
-            })
-            console.log(that.data.activityList)
-        }
-      })
+
   },
 
   /**

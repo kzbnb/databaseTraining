@@ -12,10 +12,27 @@
     select * from turn where turn_id=#{turn_id}
     </select>
 
+
+    <select id="getTurnByActivityId" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+    select * from turn where activity_id=#{activity_id}
+    </select>
+
     <update id="updateTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
         update turn set attendNum=#{Turn.attendNum}
         where turn_id=#{Turn.turn_id}
     </update>
+
+    <insert id="addTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+    insert into turn(turn_id, limitPeople, begin_time, end_time, placeName, earlyOrNoon, attendNum, detailDate,activity_id)
+     values(#{turn_id},#{limitPeople},#{begin_time},#{end_time},#{placeName},#{earlyOrNoon},#{attendNum},#{detailDate},#{activity_id})
+    </insert>
+
+    <select id="getTurnByTurnIdArray"  parameterType="java.util.List" resultType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+    select * from turn where turn_id in
+    <foreach collection="turn_id" item="item" index="index" open="(" close=")" separator=",">
+       #{item}
+    </foreach>
+    </select>
 
 
 </mapper>
