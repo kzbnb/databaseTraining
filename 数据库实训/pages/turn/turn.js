@@ -130,9 +130,9 @@ Page({
     })
     console.log('test',that.data.id)
     wx.request({
-      url: 'http://localhost:8080/showTurnByPlaceName',
+      url: 'http://localhost:8080/getTurnByActivityId',
       data:{
-        placeName:that.data.id
+        activity_id:that.data.id-0
       },
       success(res){
         console.log(res)

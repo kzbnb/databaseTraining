@@ -12,7 +12,7 @@
             <image class="img" src="/images/sign.png" /> 
          </view>
         <view class="kzb">
-	         <view  bindtap='goToShowTurns' data-id="{{item.title}}">
+	         <view  bindtap='goToShowTurns' data-id="{{item.activity_id}}">
 	         <view class="title">{{item.title}}</view>	
 	        </view>
              <view class="help">
