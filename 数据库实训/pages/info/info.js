@@ -183,5 +183,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+/*页面跳转*/ 
+writeInfo:function(){
+  wx.navigateTo({
+    url: '../write_myInfo/write_myInfo',
+  })
+}
 })

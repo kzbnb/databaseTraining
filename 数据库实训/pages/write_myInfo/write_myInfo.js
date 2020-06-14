@@ -95,9 +95,10 @@ Page({
           image:"../../images/success.jpg",
           duration:2000
         })
-        wx.navigateBack({
+        /*wx.navigateBack({
+          duration:2000,
           delta:1
-        })
+        })*/
       },
       fail(){
         wx.showToast({
@@ -106,6 +107,10 @@ Page({
           image:"../../images/fail.jpg",
           duration:2000
         })
+        /*wx.navigateBack({
+          duration:2000,
+          delta:1
+        })*/
      }
       
 
