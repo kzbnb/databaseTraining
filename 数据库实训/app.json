@@ -1,8 +1,8 @@
 {
   "pages": [
-     
-      "pages/my/my",
     "pages/addactivity/addactivity",
+      "pages/my/my",
+  
   "pages/turn/turn",
     "pages/excel/excel", 
    "pages/myRecord/myRecord",

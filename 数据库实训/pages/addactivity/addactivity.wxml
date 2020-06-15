@@ -37,13 +37,25 @@
 	<div class="item" id="group">
 		<text>活动地点</text>
 		<input class="shijiandidian" bindinput="addPlace"></input>
-		<button type="button" onlick="add_group()">添加</button>
+		<button class="tianjia" type="button" onlick="add_group()">添加</button>
 	</div>
 	<div class="item" id="group">
 		<text>活动日期</text>
 		<input placeholder="如2020.02.02" bindinput="addTime"></input>
 	</div>
 	</form>
+</view>
+
+	<view class="item" >
+		<text class="huodongbanci">活动班次</text>
+	  <radio-group class="choosebanci" bindchange="radioChange">
+		<label class="radio"><radio>早班</radio>
+		</label>
+    <label class="radio"><radio>午班</radio>
+    </label>
+    <label class="radio"><radio>早班和午班</radio>
+		</label>
+		</radio-group>
 </view>
 
 	<view class="item">
@@ -65,7 +77,5 @@
 		<text>活动午班具体结束时间</text>
 		<input placeholder="如18:00" bindinput="addNoonEndTime"></input>
 	</view>
-
 </view>
-
-<button bindtap='uploadActivity' class='sub'>上传活动</button>
+	<button bindtap='uploadActivity' class="sub">提交活动</button>
