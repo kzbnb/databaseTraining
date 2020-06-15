@@ -1,9 +1,15 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/addactivity/addactivity",
       "pages/my/my",
   
   "pages/turn/turn",
+=======
+    "pages/turn/turn",
+      "pages/my/my",
+    "pages/addactivity/addactivity",
+>>>>>>> 57fb17479e50f19beb44dbd5da4f8359773a1a4f
     "pages/excel/excel", 
    "pages/myRecord/myRecord",
     "pages/info/info",
