@@ -1,15 +1,26 @@
 
-<input value="{{place}}" type="text" title="站点"  bindinput="getPlace" placeholder="站点名称 如：“珠江新城" />
-<input value="{{date}}" type="text" title="日期"  bindinput="getDate" placeholder="日期 如： 2020.08.01" />
-<button bindtap="search">搜索</button>
+<view class="biankuang">
+  <view class="biankuang2">
+  <text class="a">站点: </text>
+<input value="{{place}}" type="text" title="站点"  bindinput="getPlace" placeholder="如：“珠江新城”" class="b"/>
+  </view>
+
+  <view class="biankuang2">
+  <text class="a">日期: </text>
+<input value="{{date}}" type="text" title="日期"  bindinput="getDate" placeholder="如： 2020.08.01" class="b"/>
+  </view>
+
+<button bindtap="search" class="sousuo">搜索</button>
+</view>
 <view class="news-list">
   <view class="news-item" wx:for="{{turn}}" wx:key="{{item.id}}" >
    <view class="rongqi">
     <view  >
-        <view class="title"> 站点：{{item.placeName}}</view>
+        <view class="title"> 站点：
+        {{item.placeName}}</view>
         <view class="time">活动时间：{{item.begin_time}}--{{item.end_time}}</view>
-        <view class="time">截止报名时间:活动前一天</view>
-        <button  bindtap="participate" data-id="{{item.turn_id}}">报名</button>
+        <view class="time">截止报名时间: 活动前一天</view>
+        <button  bindtap="participate" data-id="{{item.turn_id}}" class="baoming">报名</button>
 <!-- 
 			<button wx:if='{{isAdd}}' "  bindtap="run_away" >退选</button>
 			<button wx:if='{{!isAdd}}' hover-class="true" plain bindtap="participate_in">点击报名</button> -->
@@ -21,7 +32,7 @@
              <image class='suo' src="/images/user.png"></image> 
           </li>
           <li class="person">
-             <text >{{item.attendNum}}/{{item.limitPeople}}</text>
+             <text class="d">{{item.attendNum}}/{{item.limitPeople}}</text>
           </li>
         </ul>
     </view>
