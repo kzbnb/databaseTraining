@@ -31,15 +31,20 @@ input{
   float:right;
   text-align: right;
   color:red;
-  font-size:32rpx;
+  font-size:15px;
 }
 
 .left{
   float:left;
 }
 .border{
-  height:100rpx;
+  height:50px;
   width: 100%;
   border-bottom:rgba(0, 0, 0, 0.1) 1px solid;
-  line-height: 100rpx;
+  line-height: 50px;
+}
+
+.xinxi{
+  padding-left: 10px;
+  width: 210px;
 }

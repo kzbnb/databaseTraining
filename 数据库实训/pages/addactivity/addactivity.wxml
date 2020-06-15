@@ -66,6 +66,11 @@
 		<input placeholder="如18:00" bindinput="addNoonEndTime"></input>
 	</view>
 
+	  <view>
+	  <text class="zhanwei">11</text>
+		<text class="zhanwei">11</text>
+  </view>
+
 </view>
 
 <button bindtap='uploadActivity' class='sub'>上传活动</button>

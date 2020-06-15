@@ -8,10 +8,13 @@
   border-bottom:1rpx solid black;
   height:120px;
   position:relative;
-  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border: 1px rgba(0, 0, 0, 0.5) solid;
   border-radius: 5px;
   padding:10px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .news-item .container .img{
   height:100px;
@@ -19,8 +22,9 @@
   margin-right:10px;
 }
 .title{
-  
+  color: rgba(0,0,0,0.7);
   font-weight: 500;
+  padding-left: 10px;
 }
 .rongqi{
   position:relative;
@@ -28,7 +32,9 @@
 }
 .time{
   font-size:13px;
-  color:red;
+  color:rgba(255,0,0 ,0.8);
+  padding-top: 5px;
+  padding-left: 10px;
 }
 .fuzhu{
   position: absolute;
@@ -50,4 +56,20 @@
 }
 .fuzhu .person text{
   font-size: 11px;
+  padding-left: 10px;
+}
+.tuixuan{
+  width: 100px;
+  border-radius:25px ;
+  background-color:rgba(0, 0, 0, 0.5) 2px solid;
+  font-weight: 600;
+  font-size:16px;
+  margin-top:20px;
+  margin-left: 420rpx;
+}
+.tishi{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 3px;
+  padding-bottom: 15px;
 }

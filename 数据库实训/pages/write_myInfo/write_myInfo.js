@@ -139,18 +139,32 @@ Page({
     }
   },
   noData3(){
-   if (this.data.tel == ''){     
+    var value = this.data.tel;
+    if(value.length!=11)
+    {
+      this.setData({
+        warnTel:"手机号必须是11位"
+      })
+    }
+   /*if (this.data.tel == ''){     
       this.setData({
         warnTel:"您还未输入手机"
       })
-    }
+    }*/
   },
   noData4(){
-    if (this.data.grade == ''){     
+    var value = this.data.grade;
+    if(value.length!=4)
+    {
+      this.setData({
+        warnGrade:"年级必须是四位数"
+      })
+    }
+    /*if (this.data.grade == ''){     
       this.setData({
         warnGrade:"您还未输入年级"
       })
-    }
+    }*/
   },
 
   data1(){
