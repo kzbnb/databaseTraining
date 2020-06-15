@@ -9,7 +9,9 @@ swiper image{
 }
 
 .news-list{
-  padding:15px;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .news-item{
   display: flex;
@@ -17,10 +19,10 @@ swiper image{
   border-bottom:1rpx solid black;
   height:120px;
   position:relative;
-  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
   border-radius: 5px;
+  margin-bottom: 40px;
   padding:10px;
-  margin-bottom: 10px;
 }
 .news-item .container .img{
   height:100px;
@@ -28,8 +30,9 @@ swiper image{
   margin-right:10px;
 }
 .title{
-  
+  font-size: 16px;
   font-weight: 500;
+  color: gray;
 }
 .rongqi{
   position:relative;
@@ -37,7 +40,8 @@ swiper image{
 }
 .time{
   font-size:13px;
-  color:red;
+  padding-top: 5px;
+  color: rgba(255, 0, 0, 0.8);
 }
 .fuzhu{
   position: absolute;
@@ -61,4 +65,50 @@ swiper image{
   font-size: 11px;
 }
 
+.a{
+  float: left;
+  padding-left: 10px;
+  padding-top: 5px;
+}
 
+.b{
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.sousuo{
+  width: 150px;
+  border-radius:25px ;
+  background-color:rgba(0, 0, 0, 0.5) 2px solid;
+  font-weight: 600;
+  font-size:16px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.d{
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+
+.baoming{
+  width: 100px;
+  border-radius:25px ;
+  background-color:rgba(0, 0, 0, 0.5) 2px solid;
+  font-weight: 600;
+  font-size:16px;
+  margin-top:20px;
+  margin-left: 400rpx;
+}
+
+.biankuang{
+  background-color:rgba(0, 0, 0, 0.5) 2px solid;
+  border-bottom: 3px rgba(0, 0, 0, 0.4) solid;
+}
+
+.biankuang2{
+  background-color:rgba(0, 0, 0, 0.5) 2px solid;
+  border-bottom: 1px rgba(0, 0, 0, 0.4) solid;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
