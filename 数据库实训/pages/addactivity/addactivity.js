@@ -120,7 +120,57 @@ ddlY:e.detail.year
     addMorningStartTime:'',
     addNoonStartTime:'',
     addNoonEndTime:'',
+    wu:false,
+    zao:false,
+    radioItems: [
+      {name: '早班', value: '早班'},
+      {name: '午班', value: '午班'},
+      {name: '早班和午班',value:'早班和午班',checked :'true'}
+    ],
+    hidden: false
+  },
 
+  radioChange(e) {
+    const checked = e.detail.value
+    const changed = {}
+    for (let i = 0; i < this.data.radioItems.length; i++) {
+      if (checked.indexOf(this.data.radioItems[i].name) !== -1) {
+        changed['radioItems[' + i + '].checked'] = true
+      } else {
+        changed['radioItems[' + i + '].checked'] = false
+      }
+    }
+    this.setData(changed)
+  },
+
+  click(){
+    if (this.data.radioItems[0].checked ==true){
+      this.setData({
+        zao:true
+      })
+    } else{
+      this.setData({
+        zao:false
+      })
+    }
+    if (this.data.radioItems[1].checked ==true){
+      this.setData({
+        wu:true
+      })
+    } else{
+      this.setData({
+        wu:false
+      })
+    }
+    if (this.data.radioItems[2].checked ==true){
+      this.setData({
+        zao:true,
+        wu:true
+      })
+    }
+  },
+  tapEvent() {
+    console.log('按钮被点击')
   },
   
   addMorningEndTime:function(event){
@@ -225,8 +275,7 @@ ddlY:e.detail.year
   {
       console.log(this.data)
       this.addActivity();
-      this.addTurn()
-
+      this.addTurn();
 
 
 

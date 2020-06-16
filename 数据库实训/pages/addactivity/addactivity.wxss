@@ -83,3 +83,7 @@ button{
   line-height: 50px;
   color:rgba(255, 255, 255, 0);
 }
+
+.label-2{
+  margin: 30rpx 0;
+}

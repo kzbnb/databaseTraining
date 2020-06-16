@@ -46,24 +46,40 @@
 	</form>
 </view>
 
-	<view class="item">
+    <view class="item" bindtap="click"> 
+		<text>活动班次</text>
+		  <view class="page-section page-section-gap">
+      <radio-group class="group" bindchange="radioChange">
+        <view class="label-2" wx:for="{{radioItems}}">
+          <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+          <label class="label-2-text" for="{{item.name}}"><text>{{item.name}}</text></label>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <view wx:if="{{zao}}">
+	  <view class="item">
 		<text>活动早班具体开始时间</text>
-		<input placeholder="如8:00" bindinput="addMorningStartTime"></input>
-	</view>
+		<input placeholder="如 8：00" bindinput="addMorningStartTime"></input>
+	  </view>
 
   	<view class="item">
 		<text>活动早班具体结束时间</text>
-		<input placeholder="如12:00" bindinput="addMorningEndTime"></input>
+		<input placeholder="如 12：00" bindinput="addMorningEndTime"></input>
+	  </view>
 	</view>
 
+  <view wx:if="{{wu}}">
   	<view class="item">
 		<text>活动午班具体开始时间</text>
-		<input placeholder="如14:00" bindinput="addNoonStartTime"></input>
-	</view>
+		<input placeholder="如 14：00" bindinput="addNoonStartTime"></input>
+	  </view>
 
   	<view class="item">
 		<text>活动午班具体结束时间</text>
-		<input placeholder="如18:00" bindinput="addNoonEndTime"></input>
+		<input placeholder="如 18：00" bindinput="addNoonEndTime"></input>
+	  </view>
 	</view>
 
 	  <view>
