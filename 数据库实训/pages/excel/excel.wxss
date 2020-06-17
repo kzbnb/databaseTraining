@@ -2,20 +2,19 @@
   font-size:18px;
   text-align:center;
   padding: 10px 0;
- border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
 }
 .item{
-  padding-left: 5%;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom:rgba(0, 0, 0, 0.1) 1px solid ;
+  border-top: rgba(0, 0, 0, 0.1) 1px solid;
   display: flex;
 }
+
 .item text{
   width: 30%;
   border-right:rgba(0, 0, 0, 0.1) 1px solid;
-  margin-right:10px;
-  
+  text-align: center;
 }
 .change{
   margin-top: 20px;
@@ -24,5 +23,10 @@
   background-color:rgba(0, 0, 0, 0.1) 1px solid;
   font-weight: 600;
   font-size:16px;
-  
+}
+
+button{
+  margin-bottom: 20px;
+  background-color: #212124;
+  color: #dbb86b;
 }
