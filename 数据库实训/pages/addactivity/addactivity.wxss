@@ -32,13 +32,14 @@
 
 .sub {
   font-size: 20px;
-  background: #fff;
-  position: fixed;
+  background: #212124;
+  color: #dbb86b;
   bottom: 0;
-  display: flex;
   width: 100%;
   justify-content: center;
-  height: 40px;
+  line-height: 50px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .item{
@@ -86,4 +87,11 @@ button{
 
 .label-2{
   margin: 30rpx 0;
+  border: 0;
 }
+
+.label-2 text{
+  border: 0;
+}
+
+

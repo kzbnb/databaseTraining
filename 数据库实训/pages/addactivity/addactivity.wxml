@@ -51,7 +51,7 @@
 		  <view class="page-section page-section-gap">
       <radio-group class="group" bindchange="radioChange">
         <view class="label-2" wx:for="{{radioItems}}">
-          <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+          <radio id="{{item.name}}" value="{{item.name}}" ></radio>
           <label class="label-2-text" for="{{item.name}}"><text>{{item.name}}</text></label>
         </view>
       </radio-group>
@@ -86,7 +86,6 @@
 	  <text class="zhanwei">11</text>
 		<text class="zhanwei">11</text>
   </view>
-
 </view>
 
 <button bindtap='uploadActivity' class='sub'>上传活动</button>
