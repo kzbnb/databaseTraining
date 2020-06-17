@@ -1,16 +1,19 @@
+<view class="header">
+	<text>搜索站点</text>
+</view>
 
 <view class="biankuang">
   <view class="biankuang2">
-  <text class="a">站点: </text>
+  <text class="a">站点 </text>
 <input value="{{place}}" type="text" title="站点"  bindinput="getPlace" placeholder="如：“珠江新城”" class="b"/>
   </view>
 
   <view class="biankuang2">
-  <text class="a">日期: </text>
+  <text class="a">日期 </text>
 <input value="{{date}}" type="text" title="日期"  bindinput="getDate" placeholder="如： 2020.08.01" class="b"/>
   </view>
 
-<button bindtap="search" class="sousuo">搜索</button>
+<button bindtap="search" class="sousuo">搜 索</button>
 </view>
 <view class="news-list">
   <view class="news-item" wx:for="{{turn}}" wx:key="{{item.id}}" >
