@@ -15,7 +15,11 @@ Page({
     ],
     takesNeedTurn:[],
     title:'',
-    targetId:''
+    targetId:'',
+    openId:[],
+    info:[],
+    targetOpenId:[],
+    targetUserInfo:[]
   },
   
   getActivityId: function (e) {
@@ -78,20 +82,116 @@ getTurnByActivityId:function()
 
 },
 
-/*
-getTurnId:function()
-{
-  let that=this;
-  for (var i = 0; i < that.data.takes.length; i=i+1) {  
-    
-      console.log("1")
-        this.data.takesNeedTurn.push(that.data.takes[i].turn_id)
-     
-}  
 
-console.log(this.data.takesNeedTurn)
+
+getID:function(){
+    
+
+  let that=this
+  console.log(this.data.targetId)
+  wx.request({
+    url: 'http://localhost:8080/getOpenidByTurnId',
+    data: {
+      turn_id: that.data.targetId
+    },
+    success(res) {
+      console.log(res,'2')
+      that.setData({
+        targetOpenId: res.data
+      })
+
+//取info
+      for(var i=0;i<that.data.targetOpenId.length;i++)
+      {
+
+
+  wx.request({
+    url: 'http://localhost:8080/getUserInfo',
+    data: {
+      openid: that.data.targetOpenId[i]
+    },
+    success(res) {
+      console.log(res.data)
+      that.data.targetUserInfo.push({
+        
+//单人版test
+
+        name:res.data.name,
+        num: res.data.stuNum,
+        tel:res.data.tel,
+        grade:res.data.grade,
+        class:res.data.classNum
+
+      })
+      console.log(that.data.targetUserInfo)
+      that.setData({
+        targetUserInfo:that.data.targetUserInfo
+      })
+      console.log(that.data.targetUserInfo)
+that.make_to_cloud()
+
+
+    }
+
+  })
+    }
+  }
+
+  })
+  
+  },
+
+     
+      /////
+    make_to_cloud:function(){
+  let that=this
+  let array=that.data.targetUserInfo
+ 
+  
+  console.log(array)
+  wx.cloud.callFunction({
+    name:'dataToExcel',
+   
+    data: {
+     info: array,
+    
+   },
+
+    success(res){
+      console.log('cloud success',res)
+     // console.log('that.data.count',that.data.count)
+      //console.log('that.data.count_final',that.data.count_final)
+      //if(that.data.count==that.data.count_final)
+      
+      that.getUrl(res.result.fileID)
+      
+      
+    
+    },
+    fail(res) {
+      console.log(res)
+    }
+  })
 },
-*/
+//////
+
+
+getUrl:function(fileID){
+  let that = this;
+  wx.cloud.getTempFileURL({
+    fileList: [fileID],
+    success: res => {
+      // get temp file URL
+      console.log("文件下载链接", res.fileList[0].tempFileURL)
+      that.setData({
+        fileUrl: res.fileList[0].tempFileURL
+      })
+    },
+    fail: err => {
+      // handle error
+    }
+  })
+},
 
 
 getturnId:function(e)
@@ -110,7 +210,7 @@ getinput:function (e) {
 
 getExcel:function (e) {
   
-
+this.getID()
 
   
 },

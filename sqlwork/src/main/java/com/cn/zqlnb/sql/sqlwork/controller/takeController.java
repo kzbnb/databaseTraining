@@ -39,4 +39,18 @@ public class takeController {
             return "ok";
         return "no";
     };
+
+      /*  <select id="getOpenidByTurnId" resultType="java.lang.Integer">
+    select _openid from takes where turn_id=#{turn_id}
+    </select>*/
+
+      @RequestMapping("/getOpenidByTurnId")
+      public  Object getOpenidByTurnId(int turn_id){
+          System.out.println("gettakes turn_id is"+turn_id);
+          List<String> ID =takeDao.getOpenidByTurnId(turn_id);
+//        String takeJson= JSON.toJSONString((takes));
+          return ID;
+      };
+
+
 }

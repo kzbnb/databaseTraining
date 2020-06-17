@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/excel/excel", 
     "pages/back/back",
     "pages/my/my",
     "pages/turn/turn",
@@ -7,7 +8,7 @@
     "pages/info/info",
     "pages/write_myInfo/write_myInfo",
     "pages/addactivity/addactivity",
-    "pages/excel/excel", 
+    
     "pages/index/index"
   ],
   "usingComponents": {
