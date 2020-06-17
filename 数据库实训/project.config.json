@@ -30,7 +30,7 @@
 	"libVersion": "2.11.0",
 	"appid": "wx91d2200413e9813b",
 	"projectname": "%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E8%AE%AD",
-	"cloudfunctionTemplateRoot": "",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"watchOptions": {
 		"ignore": []
 	},
