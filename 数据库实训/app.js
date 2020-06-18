@@ -14,6 +14,7 @@ App({
    */
   onLaunch: function () {
     wx.cloud.init({
+      traceUser: true,
       env: "yanzhihao-ri06q"
     })
   },

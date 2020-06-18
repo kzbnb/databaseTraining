@@ -11,7 +11,20 @@ Page({
     activityList:[],
     //turns:[] ,
     turns:[
-       
+      {
+        turn_id : 2,
+        begin_time:'8:00',
+        end_time:'12:00',
+        placeName:'东北',
+        earlyOrNoon:1
+        },
+        {
+          turn_id : 4,
+          begin_time:'7:00',
+          end_time:'9:00',
+          placeName:'西南',
+          earlyOrNoon:0
+          }
     ],
     takesNeedTurn:[],
     title:'',
@@ -19,7 +32,8 @@ Page({
     openId:[],
     info:[],
     targetOpenId:[],
-    targetUserInfo:[]
+    targetUserInfo:[],
+    fileUrl:''
   },
   
   getActivityId: function (e) {
@@ -128,7 +142,7 @@ getID:function(){
         targetUserInfo:that.data.targetUserInfo
       })
       console.log(that.data.targetUserInfo)
-that.make_to_cloud()
+      that.make_to_cloud()
 
 
     }
@@ -149,15 +163,32 @@ that.make_to_cloud()
  
   
   console.log(array)
+  if(array.length>1)
+  {
+  
+  for(var i=0;i<array.length;i=i+1)
+  {
+    for(var p=i+1;p<array.length;p=p+1)
+    {
+    if(array[i].num==array[p].num)
+    {
+      array.splice(p,p);
+    }
+    }
+  }
+}
+  console.log(array)
   wx.cloud.callFunction({
     name:'dataToExcel',
    
     data: {
      info: array,
+     
     
    },
 
     success(res){
+      
       console.log('cloud success',res)
      // console.log('that.data.count',that.data.count)
       //console.log('that.data.count_final',that.data.count_final)
@@ -193,7 +224,20 @@ getUrl:function(fileID){
   })
 },
 
+copy:function(){
+  let that = this
+  wx.setClipboardData({
+    data: that.data.fileUrl,
+    success(res) {
+      wx.getClipboardData({
+        success(res) {
+          console.log("复制成功", res.data) // data
+        }
+      })
+    }
+  })
 
+},
 getturnId:function(e)
 {
   this.setData({

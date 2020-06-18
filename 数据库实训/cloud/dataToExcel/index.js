@@ -10,10 +10,7 @@ exports.main = async (event, context) => {
   try {   
     var alldata = [];
     let userdata = event.info
-   // let num = event.num
-    //console.log(num,"num")
-    //if(num!=userdata.length)
-   // {return }
+    
     console.log(userdata,"userdata")
 
     //1,定义excel表格名
@@ -22,7 +19,7 @@ exports.main = async (event, context) => {
    
     let row = ['姓名', '学号', '手机号','年级','班级']; //表属性
     alldata.push(row);
-    console.log(alldata,"1456")
+    console.log(alldata)
 
     for (let key in userdata) {
       console.log("di",key)
