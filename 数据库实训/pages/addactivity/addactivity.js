@@ -226,6 +226,8 @@ ddlY:e.detail.year
 
   addTurn:function(event)
   {
+    if(this.data.zao==true)
+    {
     wx.request({
       url: 'http://localhost:8080/addTurn',
       data:{
@@ -233,6 +235,28 @@ ddlY:e.detail.year
         limitPeople:this.data.limit, 
         begin_time:this.data.addMorningStartTime, 
         end_time:this.data.addMorningEndTime, 
+        detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
+        earlyOrNoon:1, 
+        attendNum:0, 
+        placeName:this.data.place,
+        activity_id:this.data.id
+      },
+      success:function(res){
+        console.log(res);
+      }
+
+      
+    })
+  }
+    if(this.data.wu==true){
+    console.log(this.data);
+    wx.request({
+      url: 'http://localhost:8080/addTurn',
+      data:{
+       turn_id:parseInt(this.data.id+"1"),
+        limitPeople:this.data.limit, 
+        begin_time:this.data.addNoonStartTime, 
+        end_time:this.data.addNoonEndTime, 
         detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
         earlyOrNoon:0, 
         attendNum:0, 
@@ -246,28 +270,7 @@ ddlY:e.detail.year
       
     })
 
-    console.log(this.data);
-    wx.request({
-      url: 'http://localhost:8080/addTurn',
-      data:{
-       turn_id:parseInt(this.data.id+"1"),
-        limitPeople:this.data.limit, 
-        begin_time:this.data.addNoonStartTime, 
-        end_time:this.data.addNoonEndTime, 
-        detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
-        earlyOrNoon:1, 
-        attendNum:0, 
-        placeName:this.data.place,
-        activity_id:this.data.id
-      },
-      success:function(res){
-        console.log(res);
-      }
-
-      
-    })
-
-
+  }
   },
 
 

@@ -11,20 +11,7 @@ Page({
     activityList:[],
     //turns:[] ,
     turns:[
-      {
-        turn_id : 2,
-        begin_time:'8:00',
-        end_time:'12:00',
-        placeName:'东北',
-        earlyOrNoon:1
-        },
-        {
-          turn_id : 4,
-          begin_time:'7:00',
-          end_time:'9:00',
-          placeName:'西南',
-          earlyOrNoon:0
-          }
+    
     ],
     takesNeedTurn:[],
     title:'',

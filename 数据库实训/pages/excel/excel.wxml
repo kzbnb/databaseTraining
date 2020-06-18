@@ -30,10 +30,10 @@
     </view>
 		</view>
 
-    <!-- <view class="item">
-		<text>turnid</text>
+     <view class="item">
+		<text>具体的班次id</text>
 		<input bindinput="getturnId"  ></input>
-	</view> -->
+	</view>
 <button bindtap="getExcel"  class="change">导出</button>
     
 
