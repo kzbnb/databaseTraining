@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/excel/excel", 
+    "pages/my/my",
+
     "pages/back/back",
     
     "pages/turn/turn",

@@ -9,14 +9,31 @@
 
  <view wx:for="{{turns}}"  >
     <view class="container">
-    {{item.turn_id}}{{item.begin_time}}{{item.end_time}}{{item.placeName}}{{item.earlyOrNoon}}
+		    <!-- {{item.turn_id}}{{item.begin_time}}{{item.end_time}}{{item.placeName}}{{item.earlyOrNoon}} -->
+				<view class="kuang">
+		 <view class="item1">
+		 <text>turnid</text>{{item.turn_id}}
+		 </view>
+		<view class="item0">
+		 <text>开始时间</text>{{item.begin_time}}
+		 </view>
+		 <view class="item0">
+		 <text>结束时间</text>>{{item.end_time}}
+		 </view>
+		 <view class="item0">
+		 <text>地点</text>{{item.placeName}}
+		 </view>
+		 <view class="item0">
+		 <text>班次</text>{{item.earlyOrNoon}}
+		 </view>
     </view>   
     </view>
+		</view>
 
-    <view class="item">
+    <!-- <view class="item">
 		<text>turnid</text>
 		<input bindinput="getturnId"  ></input>
-	</view>
+	</view> -->
 <button bindtap="getExcel"  class="change">导出</button>
     
 

@@ -1,21 +1,24 @@
 .header{
   font-size:18px;
   text-align:center;
-  padding: 10px 0;
+  padding: 20px 0;
 }
+
 .item{
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom:rgba(0, 0, 0, 0.1) 1px solid ;
-  border-top: rgba(0, 0, 0, 0.1) 1px solid;
+  border:rgba(0, 0, 0, 0.1) 1px solid ;
+  border-radius: 10px;
   display: flex;
+  margin:0 20px;
 }
 
-.item text{
+text{
   width: 30%;
   border-right:rgba(0, 0, 0, 0.1) 1px solid;
   text-align: center;
 }
+
 .change{
   margin-top: 20px;
   width: 150px;
@@ -30,3 +33,54 @@ button{
   background-color: #212124;
   color: #dbb86b;
 }
+
+.kuang{
+  margin: 20px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 20px;
+}
+
+.item1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  border-collapse: collapse;
+}
+
+.item1 text{
+  width: 30%;
+  border-right:rgba(0, 0, 0, 0.1) 1px solid;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.item2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: rgba(0, 0, 0, 0.1) 1px solid;
+  display: flex;
+  border-collapse: collapse;
+}
+
+.item2 text{
+  width: 30%;
+  border-right:rgba(0, 0, 0, 0.1) 1px solid;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.item0{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: rgba(0, 0, 0, 0.1) 1px solid;
+  display: flex;
+  border-collapse: collapse;
+}
+
+.item0 text{
+  width: 30%;
+  border-right:rgba(0, 0, 0, 0.1) 1px solid;
+  text-align: center;
+  margin-right: 20px;
+}
+
