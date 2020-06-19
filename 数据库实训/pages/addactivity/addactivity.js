@@ -236,6 +236,7 @@ ddlY:e.detail.year
     this.setData({
       workTime: wt
     })
+    console.log(this.data.workTime)
   },
 
   addNumberLimit(event) {
@@ -254,6 +255,7 @@ ddlY:e.detail.year
     this.setData({ 
       place: p
     })
+    console.log(this.data.place)
   },
 
   addName(event) {
@@ -284,19 +286,22 @@ ddlY:e.detail.year
 
   addTurn:function(event)
   {
+    for(let i = 0; i < this.data.workTime.length; i++) {
+      for (let j = 0; j < this.data.place.length; j++) {
     if(this.data.zao==true)
     {
     wx.request({
       url: 'http://localhost:8080/addTurn',
       data:{
-       turn_id:parseInt(this.data.id+"0"),
+       turn_id:parseInt(this.data.id+i+j+"0"),
         limitPeople:this.data.limit, 
         begin_time:this.data.addMorningStartTime, 
         end_time:this.data.addMorningEndTime, 
-        detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
+       // detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
+       detailDate:this.data.workTime[i],
         earlyOrNoon:1, 
         attendNum:0, 
-        placeName:this.data.place,
+        placeName:this.data.place[j],
         activity_id:this.data.id
       },
       success:function(res){
@@ -307,18 +312,20 @@ ddlY:e.detail.year
     })
   }
     if(this.data.wu==true){
+      console.log(this.data.id+i+j+"1"),
     console.log(this.data);
     wx.request({
       url: 'http://localhost:8080/addTurn',
+     
       data:{
-       turn_id:parseInt(this.data.id+"1"),
+       turn_id:parseInt(this.data.id+i+j+"1"),
         limitPeople:this.data.limit, 
         begin_time:this.data.addNoonStartTime, 
         end_time:this.data.addNoonEndTime, 
-        detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
+        detailDate:this.data.workTime[i],
         earlyOrNoon:0, 
         attendNum:0, 
-        placeName:this.data.place,
+        placeName:this.data.place[j],
         activity_id:this.data.id
       },
       success:function(res){
@@ -329,6 +336,8 @@ ddlY:e.detail.year
     })
 
   }
+      }
+}
   },
 
 

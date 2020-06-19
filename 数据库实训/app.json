@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/addactivity/addactivity",
+    "pages/my/my",
+    
     "pages/excel/excel", 
     
     "pages/back/back",
