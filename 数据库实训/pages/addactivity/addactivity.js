@@ -113,9 +113,9 @@ ddlY:e.detail.year
     ddlY:'',
     ddlM: '',
     ddlD: '',
-    place:'',
+    place:[],
     limit:'',
-    workTime:'',
+    workTime:[],
     addMorningEndTime:'',
     addMorningStartTime:'',
     addNoonStartTime:'',
@@ -128,14 +128,14 @@ ddlY:e.detail.year
       {name: '早班和午班',value:'早班和午班',checked :'true'}
     ],
     hidden: false,
-    checkbox1: [1],
-    checkbox2: [1]
+    checkbox1: [0],
+    checkbox2: [0],
   },
 
   add_group(){
     var cb1 = this.data.checkbox1;
     cb1.push(this.data.checkbox1.length);
-    this,this.setData({
+    this.setData({
       checkbox1: cb1
     });
   },
@@ -153,7 +153,7 @@ ddlY:e.detail.year
   add_date(){
     var cb2 = this.data.checkbox2;
     cb2.push(this.data.checkbox2.length);
-    this,this.setData({
+    this.setData({
       checkbox2: cb2
     });
   },
@@ -225,7 +225,17 @@ ddlY:e.detail.year
   },
 
   addTime:function(event){
-    this.setData({workTime: event.detail.value })
+    var wt=this.data.workTime;
+    if(event.detail.value.length <= 1){
+      wt.push(event.detail.value);
+    }
+    else{
+      wt.pop();
+      wt.push(event.detail.value);
+    }
+    this.setData({
+      workTime: wt
+    })
   },
 
   addNumberLimit(event) {
@@ -233,7 +243,17 @@ ddlY:e.detail.year
   },
 
   addPlace(event) {
-    this.setData({ place: event.detail.value })
+    var p = this.data.place;
+    if(event.detail.value.length <= 1){
+      p.push(event.detail.value)
+    }
+    else{
+      p.pop();
+      p.push(event.detail.value)
+    }
+    this.setData({ 
+      place: p
+    })
   },
 
   addName(event) {
