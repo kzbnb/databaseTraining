@@ -1,7 +1,7 @@
 
 
 // pages/addactivity/addactivity.js
-
+ 
 Page({
 
   clone:function(){
@@ -127,7 +127,45 @@ ddlY:e.detail.year
       {name: '午班', value: '午班'},
       {name: '早班和午班',value:'早班和午班',checked :'true'}
     ],
-    hidden: false
+    hidden: false,
+    checkbox1: [1],
+    checkbox2: [1]
+  },
+
+  add_group(){
+    var cb1 = this.data.checkbox1;
+    cb1.push(this.data.checkbox1.length);
+    this,this.setData({
+      checkbox1: cb1
+    });
+  },
+
+  delete_group(){
+    var cb1 = this.data.checkbox1;
+    if(cb1.length != 1){
+      cb1.pop(this.data.checkbox1.length);
+      this.setData({
+      checkbox1: cb1
+      });
+    }
+  },
+
+  add_date(){
+    var cb2 = this.data.checkbox2;
+    cb2.push(this.data.checkbox2.length);
+    this,this.setData({
+      checkbox2: cb2
+    });
+  },
+
+  delete_date(){
+    var cb2 = this.data.checkbox2;
+    if(cb2.length != 1){
+      cb2.pop(this.data.checkbox2.length);
+      this.setData({
+      checkbox2: cb2
+      });
+    }
   },
 
   radioChange(e) {

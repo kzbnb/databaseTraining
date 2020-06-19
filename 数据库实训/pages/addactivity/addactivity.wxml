@@ -27,6 +27,7 @@
 		<text>活动id</text>
 		<input bindinput="addId"></input>
 	</view>
+
 	<view class="item">
 		<text>活动人数</text>
 		<input bindinput="addNumberLimit"></input>
@@ -34,15 +35,21 @@
 
 <view>
 <form id="form" role="form" method="post">
-	<div class="item" id="group">
-		<text>活动地点</text>
-		<input class="shijiandidian" bindinput="addPlace"></input>
-		<button type="button" onlick="add_group()">添加</button>
-	</div>
-	<div class="item" id="group">
-		<text>活动日期</text>
-		<input placeholder="如2020.02.02" bindinput="addTime"></input>
-	</div>
+  <view id="group" wx:for = "{{checkbox1}}">
+	  <view class="item">
+		  <text>活动地点</text>
+		  <input class="shijiandidian" bindinput="addPlace"></input>
+			<button type="button" bindtap="add_group" class="button">+</button>
+	    <button type="button" bindtap="delete_group">-</button>
+    </view>
+
+	  <view class="item" id="date" wx:for="{{checkbox2}}">
+		  <text>活动日期</text>
+		  <input placeholder="如2020.02.02" bindinput="addTime" class="shijiandidian" ></input>
+		  <button type="button" bindtap="add_date" class="button">+</button>
+		  <button type="button" bindtap="delete_date" class="button">-</button>
+	  </view>
+	</view>
 	</form>
 </view>
 
