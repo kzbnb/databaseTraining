@@ -13,7 +13,7 @@
          </view>
         <view class="kzb">
 	         <view  bindtap='goToShowTurns' data-id="{{item.activity_id}}">
-	         <view class="title">{{item.title}}</view>	
+	         <view class="title">{{item.title}} {{item.activity_id}}</view>	
 	        </view>
              <view class="help">
                  <ul>

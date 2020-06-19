@@ -95,6 +95,22 @@ public class turnController {
 
         return "no";
     }
+    @RequestMapping("/deleteTurn")
+    public String deleteTurn(Integer activity_id )
+    {
+        int count=turnDao.deleteTurn(activity_id);
+        //
+        if(count>0)
+        {
+            return "ok";
+        }
 
-}
+
+        return "no";
+    }
+
+    }
+
+
+
 

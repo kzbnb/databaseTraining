@@ -8,4 +8,5 @@ public interface activityDao {
     //查所有
     public List<activity> getAllactivity();
     public int addActivity(activity activity );
+    public int deleteActivity(Integer activity_id );
 }

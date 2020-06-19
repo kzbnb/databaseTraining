@@ -18,4 +18,9 @@
     insert into activity(activity_id,title) values(#{activity_id},#{title})
     </insert>
 
+    <delete id="deleteActivity" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.activity">
+
+    DELETE FROM activity WHERE activity_id = #{activity_id}
+    </delete>
+
 </mapper>

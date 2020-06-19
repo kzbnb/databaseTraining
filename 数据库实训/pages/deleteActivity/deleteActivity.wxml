@@ -1,0 +1,13 @@
+<view class="header">
+	<text>删除活动及下属的班次</text>
+</view>
+<view class="form">
+	
+	<view class="item">
+		<text>活动id</text>
+		<input bindinput="addId"></input>
+	</view>
+
+  </view>
+
+<button bindtap='deleteActivity' class='sub'>点击删除</button>

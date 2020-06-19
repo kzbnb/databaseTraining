@@ -38,6 +38,21 @@ public class activityController {
         return "no";
     }
 
+    @RequestMapping("/deleteActivity")
+    public String deleteActivity(Integer activity_id )
+    {
+        int count=activityDao.deleteActivity(activity_id);
+        //
+        if(count>0)
+        {
+            return "ok";
+        }
+
+
+        return "no";
+    }
+
+
 
 
 }

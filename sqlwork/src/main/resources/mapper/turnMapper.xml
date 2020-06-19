@@ -28,6 +28,12 @@
         where turn_id=#{Turn.turn_id}
     </update>
 
+    <delete id="deleteTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
+
+    DELETE FROM turn WHERE activity_id = #{activity_id}
+    </delete>
+
+
     <insert id="addTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
     insert into turn(turn_id, limitPeople, begin_time, end_time, placeName, earlyOrNoon, attendNum, detailDate,activity_id)
      values(#{turn_id},#{limitPeople},#{begin_time},#{end_time},#{placeName},#{earlyOrNoon},#{attendNum},#{detailDate},#{activity_id})

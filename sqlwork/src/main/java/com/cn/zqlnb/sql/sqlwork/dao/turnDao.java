@@ -18,6 +18,7 @@ public interface turnDao {
     public int addTurn(turn turn );
 
     public turn[] getTurnByActivityId(Integer activity_id);
+    public int deleteTurn(Integer activity_id );
 
     public List<turn> getTurnByTurnIdArray(@Param("turn_id") List<Integer> turn_id);
 
