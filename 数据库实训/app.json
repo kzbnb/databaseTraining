@@ -1,10 +1,8 @@
 {
   "pages": [
+    "pages/addactivity/addactivity",
     "pages/deleteActivity/deleteActivity",
     "pages/my/my",
-    
-    "pages/addactivity/addactivity",
-    
     "pages/excel/excel",
     "pages/back/back",
     "pages/turn/turn",

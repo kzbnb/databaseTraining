@@ -210,7 +210,7 @@ ddlY:e.detail.year
   tapEvent() {
     console.log('按钮被点击')
   },
-  
+
   addMorningEndTime:function(event){
     this.setData({addMorningEndTime: event.detail.value })
   },
@@ -226,7 +226,9 @@ ddlY:e.detail.year
 
   addTime:function(event){
     var wt=this.data.workTime;
-    if(event.detail.value.length <= 1){
+    var t = event.currentTarget.dataset.t;
+    wt[t] = event.detail.value;
+   /* if(event.detail.value.length <= 1){
       wt.push(event.detail.value);
     }
     else{
@@ -235,7 +237,7 @@ ddlY:e.detail.year
     }
     this.setData({
       workTime: wt
-    })
+    })*/
     console.log(this.data.workTime)
   },
 
@@ -245,7 +247,9 @@ ddlY:e.detail.year
 
   addPlace(event) {
     var p = this.data.place;
-    if(event.detail.value.length <= 1){
+    var g = event.currentTarget.dataset.g;
+    p[g] = event.detail.value;
+    /*if(event.detail.value.length <= 1){
       p.push(event.detail.value)
     }
     else{
@@ -254,7 +258,7 @@ ddlY:e.detail.year
     }
     this.setData({ 
       place: p
-    })
+    })*/
     console.log(this.data.place)
   },
 

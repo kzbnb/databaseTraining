@@ -40,7 +40,7 @@
   <view id="group" wx:for = "{{checkbox1}}">
 	  <view class="item">
 		  <text>活动地点</text>
-		  <input class="shijiandidian" bindinput="addPlace" name="{{group}}"></input>
+		  <input class="shijiandidian" bindinput="addPlace" data-g="{{item}}"></input>
 			<button type="button" bindtap="add_group" class="button">+</button>
 	    <button type="button" bindtap="delete_group">-</button>
     </view>
@@ -48,7 +48,7 @@
 	
 	  <view class="item" id="date" wx:for="{{checkbox2}}">
 		  <text>活动日期</text>
-		  <input placeholder="如2020.02.02" bindinput="addTime" class="shijiandidian" name="{{time}}"></input>
+		  <input placeholder="如2020.02.02" bindinput="addTime" class="shijiandidian" data-t="{{item}}"></input>
 		  <button type="button" bindtap="add_date" class="button">+</button>
 		  <button type="button" bindtap="delete_date" class="button">-</button>
 	  </view>
