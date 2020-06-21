@@ -14,7 +14,6 @@
   font-size:18px;
   text-align:center;
   padding: 10px 0;
-   border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
 }
 input{
   height: 40rpx;
@@ -50,4 +49,16 @@ input{
 .xinxi{
   padding-left: 10px;
   width: 210px;
+}
+
+.biankuang{
+  border-radius: 20px;
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  margin: 10px 20px;
+}
+
+.border1{
+  height:50px;
+  width: 100%;
+  line-height: 50px;
 }

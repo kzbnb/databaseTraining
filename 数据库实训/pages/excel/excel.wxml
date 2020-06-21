@@ -31,7 +31,7 @@
 		</view>
 
      <view class="item">
-		<text>具体的班次id</text>
+		<text>班次id</text>
 		<input bindinput="getturnId"  ></input>
 	</view>
 <button bindtap="getExcel"  class="change">导出</button>
