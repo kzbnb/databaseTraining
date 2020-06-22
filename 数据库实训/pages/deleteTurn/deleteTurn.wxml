@@ -1,0 +1,43 @@
+<view class="header">
+	<text>班次删除</text>
+</view>
+  <view class="item">
+		<text>活动id</text>
+		<input bindinput="getActivityId" ></input>
+	</view>
+<button bindtap="getActivityListAndName"  class="change">查询turnid</button>
+
+ <view wx:for="{{turns}}"  >
+    <view class="container">
+		    <!-- {{item.turn_id}}{{item.begin_time}}{{item.end_time}}{{item.placeName}}{{item.earlyOrNoon}} -->
+				<view class="kuang">
+
+            <view class="item1">
+            <text>turnid</text>{{item.turn_id}}
+            </view>
+
+            <view class="item0">
+            <text>开始时间</text>{{item.begin_time}}
+            </view>
+
+            <view class="item0">
+            <text>结束时间</text>>{{item.end_time}}
+            </view>
+
+            <view class="item0">
+            <text>地点</text>{{item.placeName}}
+            </view>
+
+            <view class="item0">
+            <text>班次</text>{{item.earlyOrNoon}}
+            </view>
+
+              <view class="item0">
+              <button bindtap="delete" data-id="{{item.turn_id}}">删除</button>
+              </view>
+
+          </view>   
+      </view>
+		</view>
+
+

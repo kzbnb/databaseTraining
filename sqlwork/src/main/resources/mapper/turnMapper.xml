@@ -30,7 +30,7 @@
 
     <delete id="deleteTurn" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.turn">
 
-    DELETE FROM turn WHERE activity_id = #{activity_id}
+    DELETE FROM turn WHERE turn_id = #{turn_id}
     </delete>
 
 

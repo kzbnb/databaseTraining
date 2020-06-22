@@ -1,46 +1,30 @@
-
+// pages/addAdmin/addAdmin.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'',
-    id:''
+    openid:''
   },
-  addName:function(e){
-    this.setData({
-      title:e.detail.value
-    })
-  },
-  addId: function (e) {
-    this.setData({
-      id: e.detail.value
-    })
-  },
-  uploadActivity:function(){
+  add:function(){
+    console.log(this.data.openid)
+    var that=this
     wx.request({
-      url: 'http://localhost:8080/addActivity',
-      data: {
-        title: this.data.title,
-        activity_id: this.data.id,
+      url: 'http://localhost:8080/addAdmin',
+      data:{
+        openid:that.data.openid
       },
-      success: function (res) {
-        console.log(res);
-        if(res.statusCode==500){
-          wx.showToast({
-            title: '该id已被使用',
-          })
-        }
-        else{
-        wx.showToast({
-          title: '提交成功',
-        })
-        }
+      success(res){
+        console.log(res)
       }
     })
   },
-
+  getId:function(e){
+    this.setData({
+      openid:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

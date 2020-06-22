@@ -43,5 +43,15 @@ public class IndexController {
         }
         return "no";
     }
+
+    @RequestMapping("/addAdmin")
+    public Integer addAdmin(String openid){
+        System.out.println("addAdmin:"+openid);
+        int count= userDao.addAdmin(openid);
+        if(count>0){
+            return count;
+        }
+        return 0;
+    }
 }
 

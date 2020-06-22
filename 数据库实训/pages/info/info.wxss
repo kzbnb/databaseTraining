@@ -1,6 +1,5 @@
 .userinfo{
   height:50px;
-  width: 100%;
   border-bottom:rgba(0, 0, 0, 0.1) 1px solid;
   line-height: 50px;
   padding:  0 10px;
@@ -9,14 +8,12 @@
 .title{
   color:rgba(0, 0, 0, 1);
   float:left;
-
 }
 
 .header{
   font-size:18px;
   text-align:center;
   padding: 10px 0;
- border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
 }
 .value{
   padding-top: 14px;
@@ -31,4 +28,17 @@
   font-weight: 600;
   font-size:16px;
   margin-top:20px;
+}
+
+.biankuang{
+  border-radius: 20px;
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  margin: 10px 20px;
+}
+
+.userinfo1{
+  height:50px;
+  width: 100%;
+  line-height: 50px;
+  padding:  0 10px;
 }

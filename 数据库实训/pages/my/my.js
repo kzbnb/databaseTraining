@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    openid:''
+    openid:'',
+    admin:''
   },
   //获取openId
   getopenid:function() {
@@ -82,20 +83,42 @@ Page({
 
 
   goToback:function () {
-    console.log(app.globalData.hasLogin)
-    if (app.globalData.hasLogin) {
-      wx.navigateTo({
-        url: '/pages/back/back',
-      })
-    }
-    else {
-      wx.showModal({
-        title: '请先进行登录',
-        content: '请先登录',
-      })
-    }
+    var that=this
+    wx.request({
+      url: 'http://localhost:8080/getUserInfo',
+      data: {
+        openid: this.data.openid
+      },
+      success(res) {
+        console.log(res)
+        that.setData({
+          admin:res.data.admin
+        })
+        that.turnToBank() 
+      }
+    })
   },
 
+turnToBank:function(){
+  console.log(app.globalData.hasLogin)
+  if (app.globalData.hasLogin && this.data.admin == 1) {
+    wx.navigateTo({
+      url: '/pages/back/back',
+    })
+  }
+  else if (!app.globalData.hasLogin && this.data.admin - 0 == 1) {
+    wx.showModal({
+      title: '请先进行登录',
+      content: '请先登录',
+    })
+  }
+  else if (app.globalData.hasLogin && this.data.admin - 0 == 0) {
+    wx.showModal({
+      title: '你不是管理员',
+      content: '权限不足噢',
+    })
+  }
+},
 
 
 

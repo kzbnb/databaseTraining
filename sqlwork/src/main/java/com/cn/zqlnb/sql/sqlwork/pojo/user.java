@@ -7,6 +7,16 @@ public class user {
     private String classNum;
     private String grade;
     private String stuNum;
+
+    public Integer getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Integer admin) {
+        this.admin = admin;
+    }
+
+    private Integer admin;
     public String getOpenid() {
         return openid;
     }

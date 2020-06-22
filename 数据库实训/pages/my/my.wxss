@@ -20,7 +20,12 @@
   padding: 20rpx;
 }
 
+.denglu{
+  background-color: white;
+}
+
 .logoff{
   background-color: white;
   color: red;
 }
+

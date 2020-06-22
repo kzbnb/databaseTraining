@@ -13,5 +13,8 @@
     <select id="getUserInfo" resultType="com.cn.zqlnb.sql.sqlwork.pojo.user">
         select* from user where _openid=#{openid}
     </select>
-
+    <update id="addAdmin" parameterType="java.lang.String">
+        update user set admin=1
+        where _openid=#{openid}
+    </update>
 </mapper>

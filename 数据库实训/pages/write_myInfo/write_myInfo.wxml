@@ -1,7 +1,7 @@
 <view class="header">
 <text>填写个人信息</text>
 </view>
-
+<view class="biankuang">
 <view class="border">
     <text class="warn" >{{warnName}}</text>
     <input value="{{ name }}" type="text" title="姓名"  placeholder="姓名 如：王小华" bindinput="getName" maxlength="50" bindblur="noData1" bindfocus="data1" class="xinxi"/>
@@ -23,11 +23,12 @@
     class="xinxi"/>
 </view>
 
-<view class="border">
+<view class="border1">
     <text class="warn" >{{warnClass}}</text>
     <input value="{{ classNum }}" type="text" title="班级" placeholder="班级 如：1班"  bindinput="getClass"  maxlength="50"
     bindblur="noData5"  bindfocus="data5"
     class="xinxi"/>
+</view>
 </view>
 
 <!-- 按下按钮在框中显示data值 -->

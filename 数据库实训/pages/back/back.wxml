@@ -11,6 +11,18 @@
             <image src="/images/delete.png" />
       </i-grid-icon>
     </i-cell>
+    <i-cell title="增加班次" is-link bindtap="goToaddTurn">
+      <i-grid-icon  slot="icon">
+            <image src="/images/add.png" />
+      </i-grid-icon>
+    </i-cell>
+
+      <i-cell title="删除班次" is-link bindtap="goTodeleteTurn">
+      <i-grid-icon  slot="icon">
+            <image src="/images/delete.png" />
+      </i-grid-icon>
+    </i-cell>
+
 
 
       <i-cell title="导出名单" is-link bindtap="goToexcel">
@@ -19,4 +31,10 @@
       </i-grid-icon>
     </i-cell>
    
+
+         <i-cell title="添加管理员" is-link bindtap="goToAddAdmin">
+      <i-grid-icon  slot="icon">
+            <image src="/images/mingdan.png" />
+      </i-grid-icon>
+    </i-cell>
 </i-cell-group>

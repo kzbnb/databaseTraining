@@ -1,0 +1,3 @@
+<text>输入用户openid</text>
+<input bindinput="getId"></input>
+<button bindtap="add">添加管理员</button>

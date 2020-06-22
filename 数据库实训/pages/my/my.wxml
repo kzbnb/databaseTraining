@@ -12,7 +12,7 @@
     <image src="{{src}}"></image>
     <text>{{nickName}}</text>
   </block>
-  <button wx:else open-type="getUserInfo" bindgetuserinfo="getMyInfo"  >未登录，点此登录</button>
+  <button class="denglu" wx:else open-type="getUserInfo" bindgetuserinfo="getMyInfo"  >未登录，点此登录</button>
 </view>
 <i-cell-group>
 

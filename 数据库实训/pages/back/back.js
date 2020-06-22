@@ -7,11 +7,25 @@ Page({
   data: {
 
   },
-
-
-
-
-
+  goToAddAdmin:function(){
+    wx.navigateTo({
+      url: '/pages/addAdmin/addAdmin',
+    })
+  },
+  goTodeleteactivity: function () {
+    wx.navigateTo({
+      url: '/pages/deleteActivity/deleteActivity',
+    })},
+  goTodeleteTurn: function () {
+    wx.navigateTo({
+      url: '/pages/deleteTurn/deleteTurn',
+    })
+  },
+  goToaddTurn: function () {
+    wx.navigateTo({
+      url: '/pages/addTurn/addTurn',
+    })
+  },
   goToaddactivity :function () {
     
       wx.navigateTo({
