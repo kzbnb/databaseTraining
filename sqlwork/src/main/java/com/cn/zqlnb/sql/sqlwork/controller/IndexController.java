@@ -53,5 +53,15 @@ public class IndexController {
         }
         return 0;
     }
+
+    @RequestMapping("/deleteAdmin")
+    public Integer deleteAdmin(String openid){
+        System.out.println("deleteAdmin:"+openid);
+        int count= userDao.deleteAdmin(openid);
+        if(count>0){
+            return count;
+        }
+        return 0;
+    }
 }
 

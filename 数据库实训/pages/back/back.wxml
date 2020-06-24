@@ -37,4 +37,10 @@
             <image src="/images/mingdan.png" />
       </i-grid-icon>
     </i-cell>
+
+             <i-cell title="放弃管理员身份(再次成为管理员需其他管理员添加）" is-link bindtap="Quit">
+      <i-grid-icon  slot="icon">
+            <image src="/images/mingdan.png" />
+      </i-grid-icon>
+    </i-cell>
 </i-cell-group>

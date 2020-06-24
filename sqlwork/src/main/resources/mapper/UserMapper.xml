@@ -17,4 +17,8 @@
         update user set admin=1
         where _openid=#{openid}
     </update>
+    <update id="deleteAdmin" parameterType="java.lang.String">
+        update user set admin=0
+        where _openid=#{openid}
+    </update>
 </mapper>

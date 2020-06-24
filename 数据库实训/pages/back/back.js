@@ -5,7 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    openid:''
+  },
+  //获取openId
+  getopenid: function () {
+    // app.globalData.hasLogin = true
+    let that = this;
+    wx.cloud.callFunction({
+      name: "getOpenId",
+      success(res) {
+        let openId = res.result.openid
+        that.setData({
+          openid: openId
+        })
+      }
+    })
+  },
+  Quit:function(){
+    wx.request({
+      url: 'http://localhost:8080/deleteAdmin',
+      data:{
+        openid:this.data.openid
+      },success(res){
+        console.log(res)
+        wx.redirectTo({
+          url: '../info/info',
+        })
+      }
+    })
   },
   goToAddAdmin:function(){
     wx.navigateTo({
@@ -47,7 +74,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getopenid()
   },
 
   /**
