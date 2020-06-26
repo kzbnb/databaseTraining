@@ -56,9 +56,11 @@ Page({
         },
         success(res) {
           console.log(res)
+          if(res.statusCode==200){
           that.setData({
             myTurn:res.data
           })
+          }
         },
         fail(res) {
           console.log("后端调用失败", res)
