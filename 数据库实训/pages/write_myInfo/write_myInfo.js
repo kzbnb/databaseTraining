@@ -15,7 +15,8 @@ Page({
     warnStu:'',
     warnTel:'',
     warnGrade:'',
-    warnClass:''
+    warnClass:'',
+    exits:0
   },
 
   //添加姓名
@@ -67,6 +68,19 @@ Page({
         that.setData({
           openid: openId
         })
+        wx.request({
+          url: 'http://localhost:8080/getUserRecord',
+          data: {
+            openid:openId
+          },success(res){
+            console.log(res)
+            if(res.data=='exits'){
+              that.setData({
+                exits:1
+              })
+            }
+          }
+        })
       }
     })
   },
@@ -74,48 +88,64 @@ Page({
   addData() {
     console.log('test:',this.data.openid)
     console.log('test:',this.data.name,this.data.stuNum,this.data.grade,this.data.tel,this.data.classNum)
-    wx.request({
-      url: 'http://106.55.49.252:8080/insertUserIntoDatabase',
-      header: {  
-        "Content-Type": "application/x-www-form-urlencoded"  
-      }, 
-      method:"POST", 
-      data:{
-        openid:this.data.openid,
-        name:this.data.name,
-        tel:this.data.tel,
-        grade:this.data.grade,
-        classNum:this.data.classNum,
-        stuNum:this.data.stuNum
+    
+    if(this.data.exits==1){
+        //存在数据库则更新，否则添加
+  
+          wx.request({
+            url: 'http://localhost:8080/updateUser',
+            data:{
+              openid: this.data.openid,
+              name: this.data.name,
+              tel: this.data.tel,
+              grade: this.data.grade,
+              classNum: this.data.classNum,
+              stuNum: this.data.stuNum
+            },success(res){
+              console.log(res)
+              wx.redirectTo({
+                url: '../info/info',
+              })
+            }
+          })
+    } 
+        else{
+          wx.request({
+                url: 'http://localhost:8080/insertUserIntoDatabase',
+                header: {  
+                  "Content-Type": "application/x-www-form-urlencoded"  
+                }, 
+                method:"POST",  
+                data:{
+                  openid:this.data.openid,
+                  name:this.data.name,
+                  tel:this.data.tel,
+                  grade:this.data.grade,
+                  classNum:this.data.classNum,
+                  stuNum:this.data.stuNum
+                },
+                success(res){
+                  wx.showToast({
+                    title: '填写成功',
+                    icon:"success",
+                    image:"../../images/success.jpg",
+                    duration:2000
+                  })
+                },
+                fail(){
+                  wx.showToast({
+                    title: '填写失败',
+                    icon:'loading',
+                    image:"../../images/fail.jpg",
+                    duration:2000
+                  })
+              }
+       })
+        }
       },
-      success(res){
-        wx.showToast({
-          title: '注册成功',
-          icon:"success",
-          image:"../../images/success.jpg",
-          duration:2000
-        })
-        /*wx.navigateBack({
-          duration:2000,
-          delta:1
-        })*/
-      },
-      fail(){
-        wx.showToast({
-          title: '注册失败',
-          icon:'loading',
-          image:"../../images/fail.jpg",
-          duration:2000
-        })
-        /*wx.navigateBack({
-          duration:2000,
-          delta:1
-        })*/
-     }
-      
+ 
+  
 
-    })
-  },
 
   noData1(){
     if (this.data.name == ''){     
@@ -201,5 +231,6 @@ Page({
 
     this.getopenid()
     console.log(this.data.openid)
+
   },
 })

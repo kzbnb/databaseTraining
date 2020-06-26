@@ -11,4 +11,5 @@ public interface UserDao {
     public user getUserInfo(String openid);
     public Integer addAdmin(String openid);
     public Integer deleteAdmin(String openid);
+    public Integer updateUser(user user);
 }

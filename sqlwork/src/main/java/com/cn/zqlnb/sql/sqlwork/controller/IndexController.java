@@ -44,6 +44,22 @@ public class IndexController {
         return "no";
     }
 
+
+    @RequestMapping("/updateUser")
+    public String updateUser(user user){
+        System.out.println(("openid:"+user.getOpenid()));
+        System.out.println(("name:"+user.getName()));
+        System.out.println(("tel:"+user.getTel()));
+        System.out.println(("grade:"+user.getGrade()));
+        System.out.println(("classNum:"+user.getClassNum()));
+        System.out.println(("stuNum:"+user.getStuNum()));
+        Integer count=userDao.updateUser(user);
+        if(count>0){
+            return"ok";
+        }
+        return "no";
+    }
+
     @RequestMapping("/addAdmin")
     public Integer addAdmin(String openid){
         System.out.println("addAdmin:"+openid);

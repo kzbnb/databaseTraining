@@ -21,4 +21,9 @@
         update user set admin=0
         where _openid=#{openid}
     </update>
+
+    <update id="updateUser" parameterType="com.cn.zqlnb.sql.sqlwork.pojo.user">
+        update user set name=#{name},tel=#{tel},classNum=#{classNum}
+       where _openid=#{openid}
+    </update>
 </mapper>
