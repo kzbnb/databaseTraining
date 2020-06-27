@@ -28,15 +28,16 @@ Page({
         openid:this.data.openid
       },success(res){
         console.log(res)
-       
-      }
-    })
+        wx.reLaunch({ url:'/pages/index/index' })
+
     wx.showToast({
       title: '提交成功',
     })
     
-    
-  },
+  }
+
+})
+},
   goToAddAdmin:function(){
     wx.navigateTo({
       url: '/pages/addAdmin/addAdmin',
