@@ -104,6 +104,8 @@ swiper image{
   font-size:16px;
   margin-top:20px;
   margin-left: 400rpx;
+  background-color: #212124;
+  color: #dbb86b;
 }
 
 /* .biankuang{

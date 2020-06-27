@@ -61,7 +61,8 @@
 .tuixuan{
   width: 100px;
   border-radius:25px ;
-  background-color:rgba(0, 0, 0, 0.5) 2px solid;
+  background-color: #212124;
+  color: #dbb86b;
   font-weight: 600;
   font-size:16px;
   margin-top:20px;

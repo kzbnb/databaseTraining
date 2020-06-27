@@ -23,7 +23,7 @@
         {{item.placeName}}</view>
         <view class="time">活动时间：{{item.detailDate}}--{{item.begin_time}}--{{item.end_time}}</view>
         <view class="time">截止报名时间: 活动前一天</view>
-        <button  bindtap="participate" data-id="{{item.turn_id}}" class="baoming">报名</button>
+        <button bindtap="participate" data-id="{{item.turn_id}}" class="baoming">报名</button>
 <!-- 
 			<button wx:if='{{isAdd}}' "  bindtap="run_away" >退选</button>
 			<button wx:if='{{!isAdd}}' hover-class="true" plain bindtap="participate_in">点击报名</button> -->
