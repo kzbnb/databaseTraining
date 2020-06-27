@@ -28,11 +28,14 @@ Page({
         openid:this.data.openid
       },success(res){
         console.log(res)
-        wx.redirectTo({
-          url: '../info/info',
-        })
+    
       }
     })
+    wx.showToast({
+      title: '提交成功',
+    })
+    
+    
   },
   goToAddAdmin:function(){
     wx.navigateTo({
