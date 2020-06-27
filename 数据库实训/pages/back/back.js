@@ -28,7 +28,7 @@ Page({
         openid:this.data.openid
       },success(res){
         console.log(res)
-    
+       
       }
     })
     wx.showToast({
