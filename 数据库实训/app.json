@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/addTurn/addTurn",
     "pages/index/index",
     "pages/info/info",
     "pages/write_myInfo/write_myInfo",
@@ -11,7 +12,7 @@
     "pages/deleteActivity/deleteActivity",
     "pages/addactivity/addactivity",
     "pages/deleteTurn/deleteTurn",
-    "pages/addTurn/addTurn",
+  
     "pages/addAdmin/addAdmin"
   ],
   "usingComponents": {

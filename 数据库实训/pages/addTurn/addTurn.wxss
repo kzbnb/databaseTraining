@@ -34,8 +34,9 @@
   font-size: 20px;
   background: #212124;
   color: #dbb86b;
-  bottom: 0;
+  /*bottom: 0;*/
   width: 100%;
+  bottom: 0;
   justify-content: center;
   line-height: 50px;
   height: 50px;
@@ -98,14 +99,8 @@ button{
   width: 300rpx;
 }
 
-.item1 text{
-  width: 30%;
-  border-right:rgba(0, 0, 0, 0.1) 1px solid;
-  text-align: center;
-  margin-right: 20px;
-}
 
-.item2{
+.item1{
   padding-top: 10px;
   padding-bottom: 10px;
   border-top: rgba(0, 0, 0, 0.1) 1px solid;
@@ -113,7 +108,7 @@ button{
   border-collapse: collapse;
 }
 
-.item2 text{
+.item1 text{
   width: 30%;
   border-right:rgba(0, 0, 0, 0.1) 1px solid;
   text-align: center;
@@ -135,3 +130,6 @@ button{
   margin-right: 20px;
 }
 
+/*.fenge{
+  margin-top: 10px;
+}*/

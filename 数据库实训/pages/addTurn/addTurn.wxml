@@ -2,38 +2,9 @@
 
 
 <view>
-  <!-- 以下是对一个自定义组件的引用 -->
-  <component-tag-name inner-text="Some text"></component-tag-name>
-</view>
- <!-- 
-<calendar
-  calendarConfig="{{calendarConfig}}"
-  bind:onTapDay="onTapDay"
-  bind:afterTapDay="afterTapDay"
-  bind:onSwipe="onSwipe"
-  bind:whenChangeWeek="whenChangeWeek"
-  bind:whenChangeMonth="whenChangeMonth"
-  bind:afterCalendarRender="afterCalendarRender"
-></calendar>
- -->
-  <view wx:for="{{activity}}"  >
-    <view class="container">
-		    <!-- {{item.turn_id}}{{item.begin_time}}{{item.end_time}}{{item.placeName}}{{item.earlyOrNoon}} -->
-				<view class="kuang">
-          <view class="item1">
-          <text>活动名称</text>{{item.title}}
-          </view>
-          <view class="item0">
-          <text>活动id</text>{{item.activity_id}}
-          </view>
-         </view>   
-      </view>
-		</view>
-
-<view>
 
 
- 
+ <view class="fenge">
 <view class="item">
 		  <text>添加班次的活动id</text>
 		  <input class="shijiandidian" bindinput="getActivityId" data-g="{{item}}"></input>
@@ -101,6 +72,40 @@
 	  <text class="zhanwei">11</text>
 		<text class="zhanwei">11</text>
     </view>
+</view>
 
 
+<view>
+  <!-- 以下是对一个自定义组件的引用 -->
+  <component-tag-name inner-text="Some text"></component-tag-name>
+</view>
+ <!-- 
+<calendar
+  calendarConfig="{{calendarConfig}}"
+  bind:onTapDay="onTapDay"
+  bind:afterTapDay="afterTapDay"
+  bind:onSwipe="onSwipe"
+  bind:whenChangeWeek="whenChangeWeek"
+  bind:whenChangeMonth="whenChangeMonth"
+  bind:afterCalendarRender="afterCalendarRender"
+></calendar>
+ -->
+<scroll-view scroll-y="true" style="height: 150px;">
+  <view wx:for="{{activity}}"  >
+    <view class="container">
+		    <!-- {{item.turn_id}}{{item.begin_time}}{{item.end_time}}{{item.placeName}}{{item.earlyOrNoon}} -->
+				<view class="kuang">
+          <view class="item1">
+          <text>活动名称</text>{{item.title}}
+          </view>
+          <view class="item0">
+          <text>活动id</text>{{item.activity_id}}
+          </view>
+         </view> 
+      </view>
+		</view>
+</scroll-view>  
+ <view>
+	  <text class="zhanwei">11</text>
+    </view>
 <button bindtap='uploadActivity' class='sub'>上传活动</button>
