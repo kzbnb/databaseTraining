@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/write_myInfo/write_myInfo",
     "pages/index/index",
     "pages/excel/excel",
     "pages/myRecord/myRecord",
-    "pages/my/my",
+    
     "pages/deleteTurn/deleteTurn",
     "pages/turn/turn",
     "pages/addactivity/addactivity",
