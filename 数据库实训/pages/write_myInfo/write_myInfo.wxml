@@ -3,29 +3,34 @@
 </view>
 <view class="biankuang">
 <view class="border">
+    <text class="zhushi">姓名：</text>
     <text class="warn" >{{warnName}}</text>
-    <input value="{{ name }}" type="text" title="姓名"  placeholder="姓名 如：王小华" bindinput="getName" maxlength="50" bindblur="noData1" bindfocus="data1" class="xinxi"/>
+    <input value="{{ name }}" type="text" title="姓名"  placeholder="如：王小华" bindinput="getName" maxlength="50" bindblur="noData1" bindfocus="data1" class="xinxi"/>
 </view>
 
 <view class="border">
+    <text class="zhushi">学号：</text>
     <text class="warn" >{{warnStu}}</text>
-    <input value="{{ stuNum }}" type="text" title="学号"  placeholder="学号 如：201830661234" bindinput="getStuNum" maxlength="12" bindblur="noData2"  bindfocus="data2" class="xinxi"/>
+    <input value="{{ stuNum }}" type="text" title="学号"  placeholder="如：201830661234" bindinput="getStuNum" maxlength="12" bindblur="noData2"  bindfocus="data2" class="xinxi"/>
 </view>
   
 <view class="border">
+    <text class="zhushi">手机：</text>
     <text class="warn" >{{warnTel}}</text>
-    <input value="{{ tel }}" type="text" title="联系方式"  placeholder="手机号码 如：10012345678" bindinput="getTel" maxlength="11"  bindblur="noData3"  bindfocus="data3" class="xinxi"/>
+    <input value="{{ tel }}" type="text" title="联系方式"  placeholder="如：10012345678" bindinput="getTel" maxlength="11"  bindblur="noData3"  bindfocus="data3" class="xinxi"/>
 </view>
 
 <view class="border">
+    <text class="zhushi">年级：</text>
     <text class="warn" >{{warnGrade}}</text>
-    <input value="{{ grade }}" type="text" title="年级" placeholder="年级 如：2017"  bindinput="getGrade"   maxlength="4" bindblur="noData4"  bindfocus="data4"
+    <input value="{{ grade }}" type="text" title="年级" placeholder="如：2017"  bindinput="getGrade"   maxlength="4" bindblur="noData4"  bindfocus="data4"
     class="xinxi"/>
 </view>
 
 <view class="border1">
+    <text class="zhushi">班级：</text>
     <text class="warn" >{{warnClass}}</text>
-    <input value="{{ classNum }}" type="text" title="班级" placeholder="班级 如：1班"  bindinput="getClass"  maxlength="50"
+    <input value="{{ classNum }}" type="text" title="班级" placeholder="如：1班"  bindinput="getClass"  maxlength="50"
     bindblur="noData5"  bindfocus="data5"
     class="xinxi"/>
 </view>

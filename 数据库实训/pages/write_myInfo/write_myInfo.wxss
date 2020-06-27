@@ -33,7 +33,7 @@ input{
   float:right;
   text-align: right;
   color:red;
-  font-size:15px;
+  font-size:12px;
 }
 
 .left{
@@ -47,8 +47,11 @@ input{
 }
 
 .xinxi{
-  padding-left: 10px;
-  width: 210px;
+  width: 120px;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  font-size: 13px;
+  padding-top: 12px;
 }
 
 .biankuang{
@@ -61,4 +64,11 @@ input{
   height:50px;
   width: 100%;
   line-height: 50px;
+}
+
+.zhushi{
+  float:left;
+  text-align: left;
+  font-size:13px;
+  padding-left: 2px;
 }
