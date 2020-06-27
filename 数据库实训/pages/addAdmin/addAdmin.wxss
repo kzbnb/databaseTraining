@@ -16,6 +16,8 @@ view text{
 }
 
 button{
+  width: 150px;
   background-color: #212124;
   color: #dbb86b;
+  border-radius: 20px;
 }
