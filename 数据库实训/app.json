@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/addAdmin/addAdmin",
     "pages/my/my",
     "pages/excel/excel",
     "pages/myRecord/myRecord",
@@ -12,11 +13,7 @@
     "pages/info/info",
     "pages/write_myInfo/write_myInfo",
     "pages/back/back",
-    "pages/deleteActivity/deleteActivity",
-   
-    
-  
-    "pages/addAdmin/addAdmin"
+    "pages/deleteActivity/deleteActivity"
   ],
   "usingComponents": {
     "i-grid": "/dist/grid/index",
