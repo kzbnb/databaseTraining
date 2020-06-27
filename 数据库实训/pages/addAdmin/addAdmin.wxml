@@ -1,3 +1,6 @@
+<view>
 <text>输入用户openid</text>
 <input bindinput="getId"></input>
+</view>
+
 <button bindtap="add">添加管理员</button>
