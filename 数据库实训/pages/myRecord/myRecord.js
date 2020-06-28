@@ -36,9 +36,33 @@ Page({
         _openid:app.globalData.openid,
         turn_id:id
       },success(res){
-        console.log("delete success",res)
-        wx.redirectTo({
-          url: "../myRecord/myRecord"
+        // console.log("delete success",res,id)
+        wx.request({
+          url: 'http://localhost:8080/getTurnByTurnId',
+          data:{
+            turn_id: id
+          },success(res){
+            var res1=res
+            wx.request({
+              url: 'http://localhost:8080/updateTurn',
+              data: {
+                turn_id: res1.data.turn_id,
+                attendNum: res1.data.attendNum - 1,
+                begin_time: res1.data.begin_time,
+                end_time: res1.data.end_time,
+                limitPeople: res1.data.limitPeople,
+                earlyOrNoon: res1.data.earlyOrNoon,
+                placeName: res1.data.placeName,
+                date: res1.data.date
+              },
+              success(res) {
+                console.log('success', res)
+                wx.redirectTo({
+                  url: "../myRecord/myRecord"
+                })
+              }
+            })
+          }
         })
       }
     })
@@ -46,7 +70,7 @@ Page({
   getTurnByTurnId: function () {
     //根据班次id去获取班次内容
     let that = this
-    console.log("takes",this.data.takes)
+    // console.log("takes",this.data.takes)
     var idArray=JSON.stringify(this.data.takes)
     
       wx.request({
@@ -55,7 +79,7 @@ Page({
           turn_id: idArray
         },
         success(res) {
-          console.log(res)
+          // console.log(res)
           if(res.statusCode==200){
           that.setData({
             myTurn:res.data
@@ -77,7 +101,7 @@ Page({
         openid: app.globalData.openid
       },
       success(res) {
-        console.log(res)
+        // console.log(res)
         that.setData({
           takes: res.data
         })

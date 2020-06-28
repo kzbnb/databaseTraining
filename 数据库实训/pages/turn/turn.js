@@ -151,10 +151,6 @@ Page({
             }, success(res) {
               console.log(res)
               if (res.data == "ok") {
-                wx.showModal({
-                  title: '报名成功',
-                  content: '报名成功',
-                })
                 console.log("res:",res1)
                 // 报名成功之后更新班次信息的attendNum
                 wx.request({
@@ -170,7 +166,16 @@ Page({
                     date:res1.data.date
                   },
                   success(res){
-                    console.log('success',res)
+                    console.log('success', res)                
+                    wx.showModal({
+                      title: '报名成功',
+                      content: '报名成功',
+                      success(res) {
+                        wx.redirectTo({
+                          url: '../turn/turn?id=' +that.data.id,
+                        })
+                        }
+                    })
                   }
                 })
               }
@@ -253,7 +258,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    wx.redirectTo({
+      url: '../turn/turn?id=' + this.data.id,
+    })
   },
 
   /**
