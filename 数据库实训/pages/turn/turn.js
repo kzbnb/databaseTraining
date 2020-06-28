@@ -13,6 +13,9 @@ Page({
     place:"",
     date:""
   },
+  addMore:function(){
+    this.onReachBottom()
+  },
   getPlace:function(e){
     this.setData({
       place:e.detail.value
