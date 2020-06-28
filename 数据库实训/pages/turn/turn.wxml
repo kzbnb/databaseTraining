@@ -44,4 +44,4 @@
   </view>
  
 </view>
-<button bindtap="addMore">加载更多</button>
+<!-- <button bindtap="addMore">加载更多</button> -->

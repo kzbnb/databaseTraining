@@ -13,9 +13,9 @@ Page({
     place:"",
     date:""
   },
-  addMore:function(){
-    this.onReachBottom()
-  },
+  // addMore:function(){
+  //   this.onReachBottom()
+  // },
   getPlace:function(e){
     this.setData({
       place:e.detail.value
@@ -261,9 +261,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    wx.redirectTo({
-      url: '../turn/turn?id=' + this.data.id,
-    })
+
   },
 
   /**
