@@ -1,1 +1,23 @@
-/* pages/addAdmin/addAdmin.wxss */
+view{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border:rgba(0, 0, 0, 0.1) 1px solid ;
+  border-radius: 10px;
+  display: flex;
+  margin: 20px 20px;
+}
+
+view text{
+    width: 30%;
+    border-right:rgba(0, 0, 0, 0.1) 1px solid;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+button{
+  width: 150px;
+  background-color: #212124;
+  color: #dbb86b;
+  border-radius: 20px;
+}

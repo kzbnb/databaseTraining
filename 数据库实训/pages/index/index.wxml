@@ -20,9 +20,7 @@
                      <li>
                          <image class="jieshao" src="/images/user1.png" />
                      </li>
-                     <li class="p">
-                         <div>{{item.attendNum}}/{{item.limit}}</div>
-                     </li>
+                    
                      <li class="attend" >
                         <div>
                              查看班次

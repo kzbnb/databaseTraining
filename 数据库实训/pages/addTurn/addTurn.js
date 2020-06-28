@@ -307,8 +307,8 @@ Page({
               end_time: this.data.addMorningEndTime,
               // detailDate:this.data.ddlY+'.'+this.data.ddlM+'.'+this.data.ddlD, 
               detailDate: this.data.workTime[i],
-              earlyOrNoon: 1,
-              attendNum: 0,
+              earlyOrNoon: 1-0,
+              attendNum: 0-0,
               placeName: this.data.place[j],
               activity_id: this.data.activityId-0
             },
@@ -318,6 +318,13 @@ Page({
                 wx.showToast({
                   title: '失败乃成功之母',
                 })
+              }
+              else
+              {
+                wx.showToast({
+                  title: '提交成功',
+                })
+                
               }
             }
 
@@ -331,15 +338,15 @@ Page({
             url: 'http://localhost:8080/addTurn',
 
             data: {
-              turn_id: parseInt(this.data.id + i + j + "1"),
+              turn_id: parseInt(this.data.id + Math.random() * 10000  + Math.random() * 10000  + "1"),
               limitPeople: this.data.limit,
               begin_time: this.data.addNoonStartTime,
               end_time: this.data.addNoonEndTime,
               detailDate: this.data.workTime[i],
-              earlyOrNoon: 0,
-              attendNum: 0,
+              earlyOrNoon: 0-0,
+              attendNum: 0-0,
               placeName: this.data.place[j],
-              activity_id: this.data.id
+              activity_id: this.data.activityId-0
             },
             success: function (res) {
               console.log(res);
