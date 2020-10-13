@@ -1,2 +1,2 @@
 # databaseTraining
-databaseTraining for 2020summer
+databaseTraining for 2020summer,software school of scut
